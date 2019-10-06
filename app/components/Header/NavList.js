@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
 
 function NavList() {
   return (
     <Nav activeKey="/home" className="justify-content-between">
       <Nav.Item>
-        <Nav.Link href="/bankaccount">Bank Account</Nav.Link>
+        <Link to="/bankaccount" className="nav-link">Bank Account</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="/caseinfo">Case Info</Nav.Link>
+        <Link to="/caseinfo" className="nav-link">Case Info</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="/recipients">Recipients</Nav.Link>
+        <Link to="/recipients" className="nav-link">Recipients</Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link href="/payment">Payment</Nav.Link>
+        <Link to="/payment" className="nav-link">Payment</Link>
       </Nav.Item>
     </Nav>
   );
