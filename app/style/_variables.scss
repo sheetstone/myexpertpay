@@ -1,0 +1,27 @@
+// Grid system;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 361px,
+  md: 711px,
+  lg: 921px,
+  xl: 1201px
+);
+
+$container-max-widths: (
+  sm: 710px,
+  md: 860px,
+  lg: 920px,
+  xl: 1200px
+);
+
+// Color system
+$body-bg:       #ffffff;
+$primary:       #52C2AF;
+$secondary:     #C77CA1;
+
+$text-grey:     #666666;
+
+$nav-tabs-border-color:  #cccccc;
+$nav-tabs-link-hover-border-color: $nav-tabs-border-color;
+$nav-tabs-link-active-bg:           $body-bg ;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-link-active-bg;

@@ -4,18 +4,18 @@ import DashBoard from '../DashBoard';
 
 import style from './styles/style.scss';
 
-
-
 function AccountSummary() {
   return (
-    <section>
-      <Container>
-        <Row>
-          <Col><DashBoard /></Col>
-          <Col><DashBoard /></Col>
-        </Row>
-      </Container>
-    </section>
+    <Container className={style.accountcontainer}>
+      <Row>
+        <Col>
+          <DashBoard type='recieved' />
+        </Col>
+        <Col>
+          <DashBoard type='sent' />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

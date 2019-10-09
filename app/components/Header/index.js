@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 
-import style from './styles/style.scss';
-
 import NavList from './NavList';
 import NavLogo from './NavLogo';
+
+import style from './styles/style.scss';
 
 function Header() {
   return (
@@ -15,7 +15,7 @@ function Header() {
           <NavList />
 
           <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
+            <Navbar.Text className={style.navtext}>
               WELCOME: <a href="#logout">John Joe</a>
             </Navbar.Text>
           </Navbar.Collapse>

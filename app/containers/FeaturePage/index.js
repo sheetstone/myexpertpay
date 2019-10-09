@@ -19,7 +19,7 @@ export default function FeaturePage() {
         <title>Feature Page</title>
         <meta
           name="description"
-          content="Feature page of React.js Boilerplate application"
+          content="My Expertpay"
         />
       </Helmet>
       <h1>

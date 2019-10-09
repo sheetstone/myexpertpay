@@ -39,7 +39,7 @@ module.exports = options => ({
       },
       {
         test: /\.s(a|c)ss$/,
-        exclude: /node_modules/,
+        exclude: /node_modules|custom.scss/,
         loader: [
           isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
           {
@@ -62,6 +62,12 @@ module.exports = options => ({
         test: /\.css$/,
         include: /node_modules/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        // Preprocess 3rd party .css files located in node_modules
+        test: /\.s(a|c)ss$/,
+        include: /custom.scss|node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(eot|otf|ttf|woff|woff2)$/,

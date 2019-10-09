@@ -1,8 +1,5 @@
 /**
  * app.js
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
  */
 
 // Needed for redux-saga es6 generator support
@@ -15,8 +12,8 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import FontFaceObserver from 'fontfaceobserver';
 import history from 'utils/history';
-import 'sanitize.css/sanitize.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './style/custom.scss';
 
 // Import root app
 import App from 'containers/App';
