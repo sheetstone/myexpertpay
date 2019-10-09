@@ -36,7 +36,7 @@ class RecieveChart extends React.Component {
       case 1: //Recipent selected
         return this.getChartDataByPeople(status);
       case 2: //Bank selected
-        return this.getChartDataByPeople(status);
+        return this.getChartDataByBank(status);
       case 3: //Case selected
         return this.getChartDataByPeople(status);
       case 4: //Categoray selected
@@ -51,6 +51,16 @@ class RecieveChart extends React.Component {
     data.forEach(item => {
       if (item.status === sta) {
         fineddata.push([item.name, item.amount]);
+      }
+    });
+    return fineddata;
+  };
+
+  getChartDataByBank(sta) {
+    const fineddata = [['Bank', 'Amount']];
+    data.forEach(item => {
+      if (item.status === sta) {
+        fineddata.push([item.bank, item.amount]);
       }
     });
     return fineddata;

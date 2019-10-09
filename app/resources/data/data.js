@@ -4,115 +4,176 @@
 [
   '{{repeat(20)}}',
   {
-
     name: '{{firstName()}} {{surname()}}',
     amount: '{{floating(0, 1000)}}',
-    status: '{{integer(0, 3)}}'
-
+    status: '{{integer(0, 3)}}',
+    bank: '{{random("Chase-9923","Chase-4233","BOA-1223")}}',
+    casenumber: '{{random("DF-12010304","12SDF-2222","PPEW-321312", "12312422322 ")}}',
+    catgory: '{{random("Book","Food","Clothing", "Supplyment","Householding")}}'
   }
 ]
 */
 const data = [
   {
-    "name": "Nita Romero",
-    "amount": 332.5959,
-    "status": 3
+    "name": "Huffman Pickett",
+    "amount": 186.5157,
+    "status": 1,
+    "bank": "Chase-4233",
+    "casenumber": "12SDF-2222",
+    "catgory": "Book"
   },
   {
-    "name": "Millicent Mann",
-    "amount": 99.5129,
-    "status": 2
+    "name": "Bush Hall",
+    "amount": 779.4327,
+    "status": 0,
+    "bank": "Chase-4233",
+    "casenumber": "PPEW-321312",
+    "catgory": "Supplyment"
   },
   {
-    "name": "Andrews Stuart",
-    "amount": 649.5989,
-    "status": 0
+    "name": "Benjamin Griffith",
+    "amount": 473.7519,
+    "status": 2,
+    "bank": "BOA-1223",
+    "casenumber": "PPEW-321312",
+    "catgory": "Clothing"
   },
   {
-    "name": "Fletcher Sanders",
-    "amount": 441.6289,
-    "status": 0
+    "name": "Padilla Barnett",
+    "amount": 14.9209,
+    "status": 0,
+    "bank": "BOA-1223",
+    "casenumber": "PPEW-321312",
+    "catgory": "Clothing"
   },
   {
-    "name": "Jewel Jefferson",
-    "amount": 621.2778,
-    "status": 1
+    "name": "Chan Kline",
+    "amount": 208.9077,
+    "status": 1,
+    "bank": "BOA-1223",
+    "casenumber": 12312422322,
+    "catgory": "Food"
   },
   {
-    "name": "Sybil Roth",
-    "amount": 532.0156,
-    "status": 0
+    "name": "Kelley Odom",
+    "amount": 743.764,
+    "status": 0,
+    "bank": "BOA-1223",
+    "casenumber": "DF-12010304",
+    "catgory": "Book"
   },
   {
-    "name": "Bates Welch",
-    "amount": 395.152,
-    "status": 1
+    "name": "Bettye Hatfield",
+    "amount": 307.5089,
+    "status": 3,
+    "bank": "BOA-1223",
+    "casenumber": 12312422322,
+    "catgory": "Book"
   },
   {
-    "name": "Jacquelyn Crosby",
-    "amount": 2.4301,
-    "status": 3
+    "name": "Mueller Bridges",
+    "amount": 43.3401,
+    "status": 3,
+    "bank": "Chase-9923",
+    "casenumber": "12SDF-2222",
+    "catgory": "Clothing"
   },
   {
-    "name": "Evans Casey",
-    "amount": 175.2433,
-    "status": 3
+    "name": "Hartman Miller",
+    "amount": 363.6599,
+    "status": 2,
+    "bank": "Chase-4233",
+    "casenumber": "DF-12010304",
+    "catgory": "Supplyment"
   },
   {
-    "name": "Colon Santana",
-    "amount": 331.5638,
-    "status": 0
+    "name": "Shelia Adams",
+    "amount": 37.4813,
+    "status": 0,
+    "bank": "Chase-4233",
+    "casenumber": "12SDF-2222",
+    "catgory": "Book"
   },
   {
-    "name": "Faith Cooley",
-    "amount": 23.8581,
-    "status": 3
+    "name": "Lyons Alston",
+    "amount": 662.2732,
+    "status": 2,
+    "bank": "Chase-9923",
+    "casenumber": "12SDF-2222",
+    "catgory": "Clothing"
   },
   {
-    "name": "Mills Rich",
-    "amount": 732.7697,
-    "status": 3
+    "name": "Tate Mccormick",
+    "amount": 555.0701,
+    "status": 3,
+    "bank": "Chase-4233",
+    "casenumber": "DF-12010304",
+    "catgory": "Book"
   },
   {
-    "name": "Small Drake",
-    "amount": 439.0092,
-    "status": 2
+    "name": "Klein Head",
+    "amount": 702.0278,
+    "status": 1,
+    "bank": "Chase-4233",
+    "casenumber": "12SDF-2222",
+    "catgory": "Supplyment"
   },
   {
-    "name": "Mcneil Jordan",
-    "amount": 125.4183,
-    "status": 0
+    "name": "Kerri Davidson",
+    "amount": 895.6523,
+    "status": 0,
+    "bank": "Chase-9923",
+    "casenumber": "PPEW-321312",
+    "catgory": "Book"
   },
   {
-    "name": "Hyde Russell",
-    "amount": 647.3068,
-    "status": 3
+    "name": "Annabelle Pitts",
+    "amount": 864.8176,
+    "status": 3,
+    "bank": "BOA-1223",
+    "casenumber": "12SDF-2222",
+    "catgory": "Clothing"
   },
   {
-    "name": "Elinor Barker",
-    "amount": 569.2149,
-    "status": 0
+    "name": "Celina Castaneda",
+    "amount": 297.6847,
+    "status": 0,
+    "bank": "BOA-1223",
+    "casenumber": "12SDF-2222",
+    "catgory": "Food"
   },
   {
-    "name": "John Cline",
-    "amount": 783.7046,
-    "status": 3
+    "name": "James Velazquez",
+    "amount": 602.5018,
+    "status": 0,
+    "bank": "Chase-4233",
+    "casenumber": 12312422322,
+    "catgory": "Householding"
   },
   {
-    "name": "Margie Riggs",
-    "amount": 570.9629,
-    "status": 3
+    "name": "Pam Mckee",
+    "amount": 694.5645,
+    "status": 3,
+    "bank": "BOA-1223",
+    "casenumber": 12312422322,
+    "catgory": "Food"
   },
   {
-    "name": "Bridgette Estrada",
-    "amount": 193.3429,
-    "status": 2
+    "name": "Adkins Mcdaniel",
+    "amount": 667.2329,
+    "status": 0,
+    "bank": "BOA-1223",
+    "casenumber": "12SDF-2222",
+    "catgory": "Book"
   },
   {
-    "name": "Miles Stephens",
-    "amount": 605.3162,
-    "status": 1
+    "name": "Sherrie Hale",
+    "amount": 822.5045,
+    "status": 1,
+    "bank": "BOA-1223",
+    "casenumber": 12312422322,
+    "catgory": "Book"
   }
-];
+]
 
 export default data;
