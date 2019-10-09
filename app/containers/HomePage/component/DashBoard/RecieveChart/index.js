@@ -6,21 +6,14 @@ import style from './styles/style.scss';
 
 // with google-charts;
 const options = {
-  title: " ",
+  title: ' ',
   colors: ['#b2a0bb', '#ddc2ba', '#72bfb3', '#3C8F80', '#E6B68A', '#E68AA0'],
   pieHole: 0.4,
   is3D: false,
 };
 
-
-
-
 class RecieveChart extends React.Component {
-
   getChartData() {
-    console.log(this.props.charttype);
-    //console.log(this.props.dashboardtype);
-
     let status;
     switch (this.props.dashboardtype) {
       case 'recieved':
@@ -33,38 +26,39 @@ class RecieveChart extends React.Component {
         status = 0;
     }
     switch (this.props.charttype) {
-      case 1: //Recipent selected
-        return this.getChartDataByPeople(status);
-      case 2: //Bank selected
-        return this.getChartDataByBank(status);
-      case 3: //Case selected
-        return this.getChartDataByPeople(status);
-      case 4: //Categoray selected
-        return this.getChartDataByPeople(status);
+      case 1: // Recipent selected
+        return this.getChartDataByKey('name', status);
+      case 2: // Bank selected
+        return this.getChartDataByKey('bank', status);
+      case 3: // Case selected
+        return this.getChartDataByKey('casenumber', status);
+      case 4: // Categoray selected
+        return this.getChartDataByKey('catgory', status);
       default:
         break;
     }
   }
 
-  getChartDataByPeople(sta) {
-    const fineddata = [['Name', 'Amount']];
-    data.forEach(item => {
-      if (item.status === sta) {
-        fineddata.push([item.name, item.amount]);
-      }
-    });
-    return fineddata;
-  };
+  getChartDataByKey(key, sta) {
+    const keylist = [];
+    const fineddata = [[key, 'Amount']];
 
-  getChartDataByBank(sta) {
-    const fineddata = [['Bank', 'Amount']];
     data.forEach(item => {
-      if (item.status === sta) {
-        fineddata.push([item.bank, item.amount]);
+      if (!keylist.includes(item[key])) {
+        keylist.push(item[key]);
       }
     });
-    return fineddata;
-  };
+    const group = keylist.map(item => {
+      let sum = 0;
+      data.forEach(piece => {
+        if (piece[key] === item && piece.status === sta) {
+          sum += piece.amount;
+        }
+      });
+      return [item, sum];
+    });
+    return fineddata.concat(group);
+  }
 
   render() {
     return (
