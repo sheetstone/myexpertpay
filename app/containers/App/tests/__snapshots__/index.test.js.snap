@@ -3,13 +3,13 @@
 exports[`<App /> should render and match the snapshot 1`] = `
 <ForwardRef>
   <HelmetWrapper
-    defaultTitle="React.js Boilerplate"
+    defaultTitle="myexpertpay"
     defer={true}
     encodeSpecialCharacters={true}
-    titleTemplate="%s - React.js Boilerplate"
+    titleTemplate="%s - myexpertpay"
   >
     <meta
-      content="A React.js Boilerplate application"
+      content="myexpertpay"
       name="description"
     />
   </HelmetWrapper>

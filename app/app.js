@@ -1,8 +1,5 @@
 /**
  * app.js
- *
- * This is the entry file for the application, only setup and boilerplate
- * code.
  */
 
 // Needed for redux-saga es6 generator support
@@ -15,7 +12,8 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import FontFaceObserver from 'fontfaceobserver';
 import history from 'utils/history';
-import 'sanitize.css/sanitize.css';
+
+import './style/custom.scss';
 
 // Import root app
 import App from 'containers/App';
@@ -24,7 +22,7 @@ import App from 'containers/App';
 import LanguageProvider from 'containers/LanguageProvider';
 
 // Load the favicon and the .htaccess file
-import '!file-loader?name=[name].[ext]!./images/favicon.ico';
+import '!file-loader?name=[name].[ext]!./resources/images/favicon.ico';
 import 'file-loader?name=.htaccess!./.htaccess'; // eslint-disable-line import/extensions
 
 import configureStore from './configureStore';

@@ -1,28 +1,27 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { Container, Navbar } from 'react-bootstrap';
 
-import A from './A';
-import Img from './Img';
-import NavBar from './NavBar';
-import HeaderLink from './HeaderLink';
-import Banner from './banner.jpg';
-import messages from './messages';
+import NavList from './NavList';
+import NavLogo from './NavLogo';
+
+import style from './styles/style.scss';
 
 function Header() {
   return (
-    <div>
-      <A href="https://www.reactboilerplate.com/">
-        <Img src={Banner} alt="react-boilerplate - Logo" />
-      </A>
-      <NavBar>
-        <HeaderLink to="/">
-          <FormattedMessage {...messages.home} />
-        </HeaderLink>
-        <HeaderLink to="/features">
-          <FormattedMessage {...messages.features} />
-        </HeaderLink>
-      </NavBar>
-    </div>
+    <header className={style.header}>
+      <Container>
+        <Navbar className={style.navbar}>
+          <NavLogo />
+          <NavList />
+
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text className={style.navtext}>
+              WELCOME: <a href="#logout">John Joe</a>
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
+    </header>
   );
 }
 

@@ -4,6 +4,8 @@
 
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const isDevelopment = process.env.NODE_ENV === 'development';
 
 module.exports = options => ({
   mode: options.mode,
@@ -36,10 +38,36 @@ module.exports = options => ({
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.s(a|c)ss$/,
+        exclude: /node_modules|custom.scss/,
+        loader: [
+          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: isDevelopment,
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: isDevelopment,
+            },
+          },
+        ],
+      },
+      {
         // Preprocess 3rd party .css files located in node_modules
         test: /\.css$/,
         include: /node_modules/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        // Preprocess 3rd party .css files located in node_modules
+        test: /\.s(a|c)ss$/,
+        include: /custom.scss|node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(eot|otf|ttf|woff|woff2)$/,
@@ -113,6 +141,10 @@ module.exports = options => ({
     // drop any unreachable code.
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development',
+    }),
+    new MiniCssExtractPlugin({
+      filename: isDevelopment ? '[name].css' : '[name].[hash].css',
+      chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
     }),
   ]),
   resolve: {
