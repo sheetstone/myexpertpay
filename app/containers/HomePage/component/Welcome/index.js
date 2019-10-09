@@ -25,7 +25,7 @@ function Welcome() {
         </span>
         <span>|</span>
         <span>
-          Bank accounts number:<Link to="/bankaccount">{bank.number}</Link>
+          Bank accounts number:&nbsp;<Link to="/bankaccount">{bank.number}</Link>
         </span>
       </div>
     </section>
