@@ -20,6 +20,10 @@
   "myexpertpay.containers.FeaturePage.scaffolding.message": "Automate the creation of components, containers, routes, selectors\n  and sagas - and their tests - right from the CLI!",
   "myexpertpay.containers.FeaturePage.state_management.header": "Predictable state management",
   "myexpertpay.containers.FeaturePage.state_management.message": "Unidirectional data flow allows for change logging and time travel\n    debugging.",
+  "myexpertpay.containers.BankAccount.header": "Bank Account",
+  "myexpertpay.containers.BankAccount.scaffoldingHeader": "Below is a list of your bank accounts. To edit/delete an account, click on the account row and select from the dropdown menu. To validate an account not yet verified please click on the account row and select \"Verify\" from the dropdown menu. To add a new bank account, select \"New Bank Account.\"",
+
+
   "myexpertpay.containers.HomePage.start_project.header": "Start your next react project in seconds",
   "myexpertpay.containers.HomePage.start_project.message": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "myexpertpay.containers.HomePage.tryme.atPrefix": "@",

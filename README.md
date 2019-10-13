@@ -1,4 +1,4 @@
-### React practice project with myexpectpay
+### React project with myexpectpay
 
 # get code via Git,
 # npm install
