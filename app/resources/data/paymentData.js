@@ -13,7 +13,7 @@
   }
 ]
 */
-const data = [
+const paymentData = [
   {
     "name": "Huffman Pickett",
     "amount": 186.5157,
@@ -176,4 +176,4 @@ const data = [
   }
 ]
 
-export default data;
+export default paymentData;

@@ -1,6 +1,6 @@
 import React from 'react';
 import formatMoney from 'utils/formatMoney';
-import data from 'resources/data/data';
+import paymentData from 'resources/data/paymentData';
 
 import RecieveChart from './RecieveChart';
 import ChartTypeDropDown from './ChartTypeDropDown';
@@ -61,7 +61,7 @@ class DashBoard extends React.Component {
   getDoneMoney() {
     let sumRecieved = 0;
     let sumSent = 0;
-    data.forEach(item => {
+    paymentData.forEach(item => {
       if (item.status === 0) {
         sumRecieved += item.amount;
       } else if (item.status === 1) {
@@ -79,7 +79,7 @@ class DashBoard extends React.Component {
   getPendingMoney() {
     let sumRecieved = 0;
     let sumSent = 0;
-    data.forEach(item => {
+    paymentData.forEach(item => {
       if (item.status === 2) {
         sumRecieved += item.amount;
       } else if (item.status === 3) {

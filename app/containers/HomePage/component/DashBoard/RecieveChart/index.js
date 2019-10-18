@@ -1,6 +1,6 @@
 import React from 'react';
 import Chart from 'react-google-charts';
-import data from 'resources/data/data';
+import paymentData from 'resources/data/paymentData';
 
 import style from './styles/style.scss';
 
@@ -43,14 +43,14 @@ class RecieveChart extends React.Component {
     const keylist = [];
     const fineddata = [[key, 'Amount']];
 
-    data.forEach(item => {
+    paymentData.forEach(item => {
       if (!keylist.includes(item[key])) {
         keylist.push(item[key]);
       }
     });
     const group = keylist.map(item => {
       let sum = 0;
-      data.forEach(piece => {
+      paymentData.forEach(piece => {
         if (piece[key] === item && piece.status === sta) {
           sum += piece.amount;
         }
@@ -69,6 +69,7 @@ class RecieveChart extends React.Component {
           height="400px"
           data={this.getChartData()}
           options={options}
+          className={style.piechart}
         />
       </div>
     );

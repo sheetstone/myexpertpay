@@ -1,8 +1,11 @@
+@import './app/style/variables';
+
 .bankCard {
   background: white;
   border-radius: 4px;
   margin-bottom: 1em;
   padding: .5rem .75rem;
+  position: relative;
 }
 .bankName {
   color: #4B96AC;
@@ -22,6 +25,23 @@
   color: #666;
   margin-bottom: 0.5rem;
 }
-.verified{
+
+.labelActive{
+  font-size: 12px;
+  font-weight: bold;
+  background: $primary;
+  color: white;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border-radius: 0.4em;
+}
+.labelVerification{
+  font-size: 12px;
+  font-weight: bold;
+  background: $warning;
+  color: white;
+  display: inline-block;
+  padding: 0.2em 0.4em;
+  border-radius: 0.4em;
 
 }
