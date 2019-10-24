@@ -14,14 +14,14 @@ class ThreeScene extends Component {
     this.camera.position.z = 4;
     // ADD RENDERER
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
-    this.renderer.setClearColor('#000000');
+    this.renderer.setClearColor('#ffffff');
     this.renderer.setSize(width, height);
     this.mount.appendChild(this.renderer.domElement);
     // ADD CUBE
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
+    const geometry = new THREE.SphereGeometry(1, 4, 5);
     const material = new THREE.MeshBasicMaterial({ color: '#433F81' });
-    this.cube = new THREE.Mesh(geometry, material);
-    this.scene.add(this.cube);
+    this.sphere = new THREE.Mesh(geometry, material);
+    this.scene.add(this.sphere);
     this.start();
   }
 
@@ -41,8 +41,8 @@ class ThreeScene extends Component {
   };
 
   animate = () => {
-    this.cube.rotation.x += 0.01;
-    this.cube.rotation.y += 0.01;
+    this.sphere.rotation.x += 0.01;
+    this.sphere.rotation.y += 0.01;
     this.renderScene();
     this.frameId = window.requestAnimationFrame(this.animate);
   };
@@ -54,12 +54,13 @@ class ThreeScene extends Component {
   render() {
     return (
       <div
-        style={{ width: '400px', height: '400px' }}
+        style={{ width: '1000px', height: '400px' }}
         ref={mount => {
           this.mount = mount;
         }}
       />
     );
   }
+
 }
 export default ThreeScene;

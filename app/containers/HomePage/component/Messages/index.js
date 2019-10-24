@@ -5,7 +5,6 @@ import formatMoney from 'utils/formatMoney';
 
 import style from './styles/style.scss';
 
-
 // TODO : move data set to JSON server
 const json = {
   data: [

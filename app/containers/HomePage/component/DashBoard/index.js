@@ -1,9 +1,9 @@
 import React from 'react';
 import formatMoney from 'utils/formatMoney';
-import paymentData from 'resources/data/paymentData';
+import { getPayments } from 'api/paymentApi';
 
-import RecieveChart from './RecieveChart';
-import ChartTypeDropDown from './ChartTypeDropDown';
+import RecieveChart from '../DashBoard/RecieveChart';
+import ChartTypeDropDown from '../DashBoard/ChartTypeDropDown';
 
 import style from './styles/style.scss';
 
@@ -30,8 +30,13 @@ class DashBoard extends React.Component {
     super(props);
     this.handleChartDropdown = this.handleChartDropdown.bind(this);
     this.state = {
+      paymentData: null,
       chartType: 1,
-    }
+    };
+  }
+
+  componentDidMount() {
+    getPayments().then(data => this.setState({paymentData: data}));
   }
 
   handleChartDropdown(ctype) {
@@ -61,7 +66,8 @@ class DashBoard extends React.Component {
   getDoneMoney() {
     let sumRecieved = 0;
     let sumSent = 0;
-    paymentData.forEach(item => {
+    if (!!this.state.paymentData === false) return 0;
+    this.state.paymentData.forEach(item => {
       if (item.status === 0) {
         sumRecieved += item.amount;
       } else if (item.status === 1) {
@@ -79,7 +85,8 @@ class DashBoard extends React.Component {
   getPendingMoney() {
     let sumRecieved = 0;
     let sumSent = 0;
-    paymentData.forEach(item => {
+    if (!!this.state.paymentData === false) return 0;
+    this.state.paymentData.forEach(item => {
       if (item.status === 2) {
         sumRecieved += item.amount;
       } else if (item.status === 3) {
@@ -112,7 +119,7 @@ class DashBoard extends React.Component {
         <div className={style.chart}>
           <span className={style.chartheader}>{this.getContext(2)}</span>
           <ChartTypeDropDown onTypeDropDownChange={this.handleChartDropdown} />
-          <RecieveChart charttype={this.state.chartType} dashboardtype={this.props.type}/>
+          <RecieveChart charttype={this.state.chartType} dashboardtype={this.props.type} paymentData={this.state.paymentData}/>
         </div>
       </div>
     );
