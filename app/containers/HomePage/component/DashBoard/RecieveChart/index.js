@@ -1,18 +1,22 @@
 import React from 'react';
 import Chart from 'react-google-charts';
-import paymentData from 'resources/data/paymentData';
 
 import style from './styles/style.scss';
 
 // with google-charts;
 const options = {
   title: ' ',
-  colors: ['#b2a0bb', '#ddc2ba', '#72bfb3', '#3C8F80', '#E6B68A', '#E68AA0'],
+  colors: ['#b2a0bb', '#ddc2ba', '#72bfb3', '#759992', '#D9B797', '#D7C4C9',
+          '#BFAAC9','#82ABDB'],
   pieHole: 0.4,
   is3D: false,
 };
 
 class RecieveChart extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   getChartData() {
     let status;
     switch (this.props.dashboardtype) {
@@ -43,6 +47,10 @@ class RecieveChart extends React.Component {
     const keylist = [];
     const fineddata = [[key, 'Amount']];
 
+    const { paymentData } = this.props;
+
+    if (!!paymentData === false) return 0;
+    //console.log(paymentData);
     paymentData.forEach(item => {
       if (!keylist.includes(item[key])) {
         keylist.push(item[key]);
@@ -52,7 +60,7 @@ class RecieveChart extends React.Component {
       let sum = 0;
       paymentData.forEach(piece => {
         if (piece[key] === item && piece.status === sta) {
-          sum += piece.amount;
+          sum += parseFloat(piece.amount);
         }
       });
       return [item, sum];
