@@ -1,7 +1,7 @@
 const fs = require('fs');
 const faker = require('faker');
 
-function generateUsers() {
+function generateData() {
   const users = [];
 
   for (let id = 1; id <= 5; id++) {
@@ -16,13 +16,6 @@ function generateUsers() {
       email,
     });
   }
-
-  /*
-  name: '{{random("Chase","Bank of America","Citi Bank", "U.S. Corp", "Wells Fargo","PNC","Capital One")}}',
-  type: '{{random("Checking","Saving")}}',
-  accountnum: '{{integer(0, 9999999999999999)}}',
-  verified: '{{bool()}}'
-  */
 
   const banks = [];
 
@@ -41,22 +34,26 @@ function generateUsers() {
     });
   }
 
-  const bankDict = banks.map(item => item.name+"-"+item.accountnum.toString().match(/\d{4}$/gm));
+  const bankDict = banks.map(item => item.name + "-" + item.accountnum.toString().match(/\d{4}$/gm));
+  const caseDict = ["DF-12010304", "12SDF-2222", "PPEW-321312", "12312422322"];
+  const catgoryDict = ["Book", "Food", "Clothing", "Supplyment", "Householding"];
 
-  const caseDict = ["DF-12010304","12SDF-2222","PPEW-321312", "12312422322"];
+  const events = [];
 
-  const catgoryDict = ["Book","Food","Clothing", "Supplyment","Householding"];
+  for (let id = 1; id < 20; id++) {
+    const eventName = faker.lorem.words();
+    const startTime = faker.date.between('2019-10-01', '2019-10-31');
+    const endTime = new Date(startTime);
+    endTime.setHours(endTime.getHours() + faker.random.number(48));
 
-/*
-    {
-      name: '{{firstName()}} {{surname()}}',
-      amount: '{{floating(0, 1000)}}',
-      status: '{{integer(0, 3)}}',
-      bank: '{{random("Chase-9923","Chase-4233","BOA-1223")}}',
-      casenumber: '{{random("DF-12010304","12SDF-2222","PPEW-321312", "12312422322 ")}}',
-      catgory: '{{random("Book","Food","Clothing", "Supplyment","Householding")}}'
-    }
-*/
+    events.push({
+      id,
+      eventName,
+      startTime,
+      endTime,
+    });
+  };
+
 
   const payments = [];
 
@@ -82,10 +79,11 @@ function generateUsers() {
   return {
     "banks": banks,
     "payments": payments,
+    "events" : events,
   };
 }
 
-const dataObj = generateUsers();
+const dataObj = generateData();
 
 fs.writeFileSync('./server/data/data.json', JSON.stringify(dataObj, null, '\t'), err => {
   if (err) {

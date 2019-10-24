@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartArea, faCommentDots, faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import AccountSummary from '../AccountSummary';
 import Messages from '../Messages';
-import ThreeScene from '../../../../components/ThreeScene';
+import ActivityCalendar from '../ActivityCalendar';
 
 import style from './styles/style.scss';
 
@@ -49,7 +49,7 @@ function TabList() {
           <Messages />
         </Tab.Pane>
         <Tab.Pane eventKey="activity">
-          <ThreeScene />
+          <ActivityCalendar />
         </Tab.Pane>
       </Tab.Content>
     </Tab.Container>
