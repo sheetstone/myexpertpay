@@ -4,15 +4,13 @@ const faker = require('faker');
 function generateData() {
   const users = [];
 
-  for (let id = 1; id <= 5; id++) {
-    const firstName = faker.name.firstName();
-    const lastName = faker.name.lastName();
+  for (let id = 1; id <= 8; id++) {
+    const name = faker.name.findName();
     const email = faker.internet.email();
 
     users.push({
       id,
-      first_name: firstName,
-      last_name: lastName,
+      name: name,
       email,
     });
   }
@@ -34,16 +32,18 @@ function generateData() {
     });
   }
 
-  const bankDict = banks.map(item => item.name + "-" + item.accountnum.toString().match(/\d{4}$/gm));
+  const bankDict = banks.map(item => item.name + " - " + item.accountnum.toString().match(/\d{4}$/gm));
+  const userDict = users.map(item => item.name);
   const caseDict = ["DF-12010304", "12SDF-2222", "PPEW-321312", "12312422322"];
   const catgoryDict = ["Book", "Food", "Clothing", "Supplyment", "Householding"];
 
   const events = [];
 
-  for (let id = 1; id < 20; id++) {
+  for (let id = 1; id < 60; id++) {
     const eventName = faker.lorem.words();
-    const startTime = faker.date.between('2019-10-01', '2019-10-31');
+    const startTime = faker.date.between('2019-08-01', '2019-12-31');
     const endTime = new Date(startTime);
+    const inviter = faker.random.arrayElement(userDict);
     endTime.setHours(endTime.getHours() + faker.random.number(48));
 
     events.push({
@@ -51,6 +51,7 @@ function generateData() {
       eventName,
       startTime,
       endTime,
+      inviter,
     });
   };
 
@@ -58,7 +59,7 @@ function generateData() {
   const payments = [];
 
   for (let id = 1; id <= 20; id++) {
-    const name = faker.name.findName();
+    const name = faker.random.arrayElement(userDict);
     const amount = faker.finance.amount();
     const status = faker.random.number(3);
     const bank = faker.random.arrayElement(bankDict);
@@ -77,6 +78,7 @@ function generateData() {
   }
 
   return {
+    "users": users,
     "banks": banks,
     "payments": payments,
     "events" : events,

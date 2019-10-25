@@ -1,4 +1,149 @@
-.accountcontainer{
-  padding-top: 20px;
-  padding-bottom: 50px;
+@import './app/style/variables';
+
+.calendar {
+  margin: 20px 0;
+}
+
+.header {
+  display: flex;
+  padding: 1em 0.5em 0.5em;
+  border-bottom: 2px solid rgba(39, 155, 139, 0.65);
+  align-content: center;
+}
+
+.arrowIconBtn {
+  flex-grow: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+
+  svg {
+    flex-grow: 1;
+  }
+
+  &:hover {
+    background: rgba(#ccc, 0.3);
+  }
+}
+
+.monthLabel {
+  flex-grow: 1;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.375rem;
+  user-select: none;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.headerweek {
+  display: flex;
+  border-bottom: 1px dashed #ccc;
+  border-left: 1px dashed #ccc;
+  border-right: 1px dashed #ccc;
+}
+
+.week {
+  border-left: 1px dashed #ccc;
+  display: flex;
+}
+
+.headerday {
+  width: 120px;
+  text-align: center;
+  font-weight: bold;
+  flex-grow: 1;
+  padding: .65rem 0.75rem;
+  color: #333;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.day {
+  width: 120px;
+  height: 100px;
+  flex-grow: 1;
+  border-right: 1px dashed rgba(#ccc, 0.5);
+  border-bottom: 1px dashed #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  position: relative;
+
+  &:hover {
+    background: rgba(#ccc, 0.3)
+  }
+}
+
+.dayNum {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.8rem;
+  user-select: none;
+}
+
+.eventslist {
+  position: absolute;
+  width: 100%;
+  top: 2.4em;
+  left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.eventsli {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.8em;
+  padding: 0em 0.5em 0em;
+  line-height: 1.2;
+
+  span {
+    margin-left: 0.3em;
+    user-select: none;
+  }
+}
+
+.differentMonth {
+  color: #c2c2c2;
+}
+
+.today {
+  // background: $primary;
+  //color: $primary;
+  //font-weight: bold;
+
+  .dayNum {
+    color: white;
+    display: block;
+    background: $primary;
+    border-radius: 100%;
+    padding: 3px 6px;
+    top: 0.5rem;
+    right: 0.4rem;
+  }
+
+  &:hover {
+
+  }
+}
+
+.selected {
+  background: $primary;
+  color: white;
+
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+
+  &.today .dayNum {
+    color: $primary;
+    background: white;
+  }
 }

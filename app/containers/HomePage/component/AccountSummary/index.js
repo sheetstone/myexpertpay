@@ -13,7 +13,7 @@ class AccountSummary extends React.Component {
     super(props);
     this.state = {
       paymentData: null,
-      isLoading: false,
+      isLoading: true,
     };
   }
 
