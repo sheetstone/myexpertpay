@@ -146,7 +146,7 @@ class ActivityCalender extends React.Component {
     });
   }
   disMissSelection(e) {
-    console.log(e.currentTarget);
+    //console.log(e.currentTarget);
     this.setState({
       selectedEvent: null,
     })
