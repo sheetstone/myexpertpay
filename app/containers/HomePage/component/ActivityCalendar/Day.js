@@ -1,43 +1,19 @@
 import React from 'react';
 
 import style from './styles/style.scss';
+import drawDot from './drawDot';
 
-function drawDot(color) {
-  return (
-    <svg width="10" height="10">
-      <g>
-        <circle
-          cx="4"
-          cy="4"
-          r="4"
-          stroke="none"
-          strokeWidth="0"
-          fill={color}
-        />
-      </g>
-    </svg>
-  );
-}
 function Day(props) {
   const {
     day: { date, isCurrentMonth, isToday, number },
     events,
+    selectEvent,
   } = props;
 
-  const dotColorSchema = [
-    '#b2a0bb',
-    '#ddc2ba',
-    '#72bfb3',
-    '#759992',
-    '#D9B797',
-    '#D7C4C9',
-    '#BFAAC9',
-    '#82ABDB',
-  ];
 
   const eventsList = events.map((item, i) => (
-    <li className={style.eventsli} key={item.id}>
-      {drawDot(dotColorSchema[i])}
+    <li className={style.eventsli} key={item.id} onClick={(event) => selectEvent(event, item)}>
+      {drawDot(i)}
       <span>{item.eventName}</span>
     </li>
   ));

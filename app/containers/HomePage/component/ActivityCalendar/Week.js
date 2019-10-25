@@ -8,13 +8,15 @@ function Week(props) {
   let { date } = props;
   let dayEvents = [];
 
-  const { month, events } = props;
+  const { month, events, selectEvent } = props;
 
   for (let i = 0; i < 7; i++) {
     dayEvents = new Array();
     if (!!events) {
       events.forEach(item => {
-        if (date.isSame(item.startTime, 'day'))
+        if (date.isSame(item.startTime, 'day')||
+            date.isBetween(item.startTime, item.endTime)||
+            date.isSame(item.endTime, 'day'))
         dayEvents.push(Object.assign({}, item));
       });
     }
@@ -26,7 +28,7 @@ function Week(props) {
       isToday: date.isSame(new Date(), 'day'),
       date,
     };
-    days.push(<Day key={date.toString()} day={day} events={dayEvents} />);
+    days.push(<Day key={date.toString()} day={day} events={dayEvents} selectEvent={selectEvent}/>);
 
     date = date.clone();
     date.add(1, 'day');

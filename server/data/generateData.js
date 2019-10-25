@@ -44,7 +44,8 @@ function generateData() {
     const startTime = faker.date.between('2019-08-01', '2019-12-31');
     const endTime = new Date(startTime);
     const inviter = faker.random.arrayElement(userDict);
-    endTime.setHours(endTime.getHours() + faker.random.number(48));
+    const location = faker.address.streetAddress() + ", " + faker.address.secondaryAddress() + ", " + faker.address.stateAbbr();
+    endTime.setHours(endTime.getHours() + faker.random.number(48) + 1);
 
     events.push({
       id,
@@ -52,6 +53,7 @@ function generateData() {
       startTime,
       endTime,
       inviter,
+      location,
     });
   };
 
