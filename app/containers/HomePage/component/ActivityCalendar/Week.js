@@ -8,7 +8,7 @@ function Week(props) {
   let { date } = props;
   let dayEvents = [];
 
-  const { month, /*selected, select,*/ events } = props;
+  const { month, events } = props;
 
   for (let i = 0; i < 7; i++) {
     dayEvents = new Array();
@@ -26,7 +26,7 @@ function Week(props) {
       isToday: date.isSame(new Date(), 'day'),
       date,
     };
-    days.push(<Day key={date.toString()} day={day} /* selected={selected} select={select}*/ events={dayEvents} />);
+    days.push(<Day key={date.toString()} day={day} events={dayEvents} />);
 
     date = date.clone();
     date.add(1, 'day');

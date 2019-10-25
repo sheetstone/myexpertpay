@@ -53,7 +53,7 @@ class ActivityCalender extends React.Component {
   renderWeeks() {
     const weeks = [];
     let events = [];
-    const { selected, month } = this.state;
+    const { month } = this.state;
 
     let done = false;
     const date = month
@@ -80,8 +80,6 @@ class ActivityCalender extends React.Component {
           key={date}
           date={date.clone()}
           month={month}
-          // select={day => this.select(day)} // depatched using select event function instead
-          // selected={selected}
           events={events}
           className={style.week}
         />,
@@ -110,16 +108,6 @@ class ActivityCalender extends React.Component {
     }
     return events;
   }
-
-  /*
-    Depatched, using select event function instead
-
-  select(day) {
-    this.setState({
-      selected: day.date,
-      month: day.date.clone(),
-    });
-  }*/
 
   render() {
     const { eventsData, isLoading } = this.state;

@@ -20,10 +20,7 @@ function drawDot(color) {
 }
 function Day(props) {
   const {
-    day,
     day: { date, isCurrentMonth, isToday, number },
-    //select,
-    //selected,
     events,
   } = props;
 
