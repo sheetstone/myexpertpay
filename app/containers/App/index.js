@@ -11,7 +11,8 @@ import { Helmet } from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FeaturePage from 'containers/FeaturePage/Loadable';
+import BankAccount from 'containers/BankAccount/Loadable';
+import CaseInfo from 'containers/CaseInfo/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -25,7 +26,8 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/bankaccount" component={FeaturePage} />
+        <Route path="/bankaccount" component={BankAccount} />
+        <Route path="/caseinfo" component={CaseInfo} />
         <Route path="" component={NotFoundPage} />
       </Switch>
       <Footer />

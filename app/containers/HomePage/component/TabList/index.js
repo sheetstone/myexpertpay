@@ -4,8 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartArea, faCommentDots, faCalendarCheck } from '@fortawesome/free-solid-svg-icons'
 import AccountSummary from '../AccountSummary';
 import Messages from '../Messages';
+import ActivityCalendar from '../ActivityCalendar';
 
 import style from './styles/style.scss';
+
 
 //  This page used fa-awsome looking at document for more details:
 //  https://github.com/FortAwesome/react-fontawesome
@@ -47,7 +49,7 @@ function TabList() {
           <Messages />
         </Tab.Pane>
         <Tab.Pane eventKey="activity">
-          <div>ss3</div>
+          <ActivityCalendar />
         </Tab.Pane>
       </Tab.Content>
     </Tab.Container>

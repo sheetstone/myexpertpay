@@ -21,7 +21,7 @@ export default function HomePage() {
       </Helmet>
 
       <Container>
-        <Welcome>Welcome</Welcome>
+        <Welcome />
       </Container>
 
       <TabList />
