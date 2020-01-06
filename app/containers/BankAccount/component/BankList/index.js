@@ -4,10 +4,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-import BankItem from '../BankItem';
 import bankData from 'resources/data/bankData';
-
-import style from './styles/style.scss';
+import BankItem from '../BankItem';
 
 export default function BankList() {
   return (

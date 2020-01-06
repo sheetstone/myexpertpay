@@ -32,12 +32,18 @@
     transform: scale(0);
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    background: #ccc;
   }
 
-  &.active::after {
+  &:hover::after {
     transform: scale(1);
     opacity: 1;
+    background: #eee;
+  }
+
+  &.active::after{
+    transform: scale(1);
+    opacity: 1;
+    background: #dadcdd;
   }
 }
 

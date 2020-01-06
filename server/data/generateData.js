@@ -41,7 +41,7 @@ function generateData() {
 
   for (let id = 1; id < 60; id++) {
     const eventName = faker.lorem.words();
-    const startTime = faker.date.between('2019-08-01', '2019-12-31');
+    const startTime = faker.date.between('2019-10-01', '2020-2-28');
     const endTime = new Date(startTime);
     const inviter = faker.random.arrayElement(userDict);
     const location = faker.address.streetAddress() + ", " + faker.address.secondaryAddress() + ", " + faker.address.stateAbbr();
@@ -55,7 +55,7 @@ function generateData() {
       inviter,
       location,
     });
-  };
+  }
 
 
   const payments = [];
