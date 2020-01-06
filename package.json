@@ -94,6 +94,7 @@
     "react-dom": "16.8.6",
     "react-google-charts": "^3.0.15",
     "react-helmet": "6.0.0-beta",
+    "react-hook-form": "^4.4.3",
     "react-intl": "2.8.0",
     "react-redux": "^7.1.1",
     "react-router-dom": "5.0.0",
