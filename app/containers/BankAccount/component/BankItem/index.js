@@ -6,10 +6,14 @@ import React from 'react';
 import style from './styles/style.scss';
 import SideDropDownMenu from '../SideDropDownMenu';
 
-function formatBankNumber(number) {
+function formatBankNumber(number = "0") {
   const reg = /\d{4}$/gm;
   const found = number.toString().match(reg);
-  return "XXXX-XXXX-XXXX-"+found[0]
+  if (found !== null){
+    return "XXXX-XXXX-XXXX-"+found[0]
+  }else{
+    return "Error!"
+  }
 }
 
 function labelActive() {

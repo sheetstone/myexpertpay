@@ -18,11 +18,13 @@ class AccountSummary extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ isLoading: true })
-    getPayments().then(data => this.setState({
-      paymentData: data,
-      isLoading: false
-    }));
+    this.setState({ isLoading: true });
+    getPayments().then(data =>
+      this.setState({
+        paymentData: data,
+        isLoading: false,
+      }),
+    );
   }
 
   render() {
@@ -35,10 +37,10 @@ class AccountSummary extends React.Component {
       <Container className={style.accountcontainer}>
         <Row>
           <Col>
-            <DashBoard type='recieved' paymentData={paymentData} />
+            <DashBoard type="recieved" paymentData={paymentData} />
           </Col>
           <Col>
-            <DashBoard type='sent' paymentData={paymentData} />
+            <DashBoard type="sent" paymentData={paymentData} />
           </Col>
         </Row>
       </Container>

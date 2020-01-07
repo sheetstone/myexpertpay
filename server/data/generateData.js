@@ -15,11 +15,22 @@ function generateData() {
     });
   }
 
+  const bankCheatSheet = {
+    "Chase": faker.random.number(999999999999),
+    "Bank of America": faker.random.number(999999999999),
+    "Citi Bank": faker.random.number(999999999999),
+    "U.S. Corp": faker.random.number(999999999999),
+    "Wells Fargo": faker.random.number(999999999999),
+    "PNC": faker.random.number(999999999999),
+    "Capital One": faker.random.number(999999999999)
+  }
+
   const banks = [];
 
   for (let id = 1; id <= 5; id++) {
-    const name = faker.random.arrayElement(["Chase", "Bank of America", "Citi Bank", "U.S. Corp", "Wells Fargo", "PNC", "Capital One"]);
+    const name = faker.random.arrayElement(Object.keys(bankCheatSheet));
     const type = faker.random.arrayElement(["Checking", "Saving"]);
+    const rountinnum = bankCheatSheet[name];
     const accountnum = faker.random.number(999999999999);
     const verified = faker.random.boolean();
 
@@ -27,6 +38,7 @@ function generateData() {
       id,
       name,
       type,
+      rountinnum,
       accountnum,
       verified,
     });
@@ -55,7 +67,7 @@ function generateData() {
       inviter,
       location,
     });
-  }
+  };
 
 
   const payments = [];
