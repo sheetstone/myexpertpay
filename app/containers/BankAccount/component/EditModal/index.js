@@ -6,87 +6,150 @@ import { FormattedMessage } from 'react-intl';
 import { useForm } from 'react-hook-form';
 import { Modal, Button, Form, Col } from 'react-bootstrap';
 import { addBank } from 'api/bankApi';
+import validRoutin from 'utils/validRoutin';
 import * as yup from 'yup';
 import messages from '../../messages';
 
 import style from './styles/style.scss';
 
+yup.addMethod(yup.string, 'isRounting', validRoutin);
+
 const schema = yup.object().shape({
-  rountingNumber: yup.string().required,
-  accountNumber: yup.string().required,
-  accountNumberConfirmation: yup.string().required,
+  rountingNumber: yup
+    .string()
+    .required('Rounting Number is required')
+    .test('is-Rounting', 'Not a valid Rounting Number', validRoutin),
+  accountNumber: yup
+    .string()
+    .required('Account Number is required')
+    .min(4, 'Account Number is invalid')
+    .max(17, 'Account Number is invalid'),
+  confirmAccountNumber: yup
+    .string()
+    .required('Account Number is required')
+    .min(4, 'Account Number is invalid')
+    .max(17, 'Account Number is invalid'),
 });
 
-export default function EditBankAccount() {
-  const { register, handleSubmit, errors, formState } = useForm({
+export default function EditBankAccount(props) {
+  const {
+    register,
+    handleSubmit,
+    errors,
+    formState,
+    triggerValidation,
+  } = useForm({
     mode: 'onBlur',
     validationSchema: schema,
   });
-  const onSubmit = data => {
-    console.log(JSON.stringify(data));
+
+  const onSubmit = async data => {
+    await triggerValidation();
+    console.log("Submitting:"+JSON.stringify(data));
     addBank(data);
   };
 
-  console.log(JSON.stringify(formState));
+  //console.log(JSON.stringify(formState));
+  //console.log(props);
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-      <Modal.Dialog>
+    <Modal {...props}>
+      <Form autoComplete="off" onSubmit={handleSubmit(onSubmit)}>
         <Modal.Header closeButton>
           <Modal.Title>
             <FormattedMessage {...messages.addBankTitle} />
           </Modal.Title>
         </Modal.Header>
-
         <Modal.Body>
           <Form.Row>
             <Col>
               <Form.Group controlId="rountingNumber">
                 <Form.Label>
                   <FormattedMessage {...messages.rountingNumber} />
-                  &nbsp;<span className={style.required} aria-label="required">*</span>
+                  &nbsp;
+                  <span className={style.required} aria-label="required">
+                    *
+                  </span>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="rountingNumber"
                   ref={register}
-                  isValid={formState.touched.rountingNumber && !errors.rountingNumber}
+                  isValid={
+                    formState.touched.rountingNumber && !errors.rountingNumber
+                  }
+                  isInvalid={
+                    formState.touched.rountingNumber && errors.rountingNumber
+                  }
                 />
+                {errors.rountingNumber && (
+                  <Form.Control.Feedback type="invalid">
+                    {errors.rountingNumber.message}
+                  </Form.Control.Feedback>
+                )}
               </Form.Group>
             </Col>
           </Form.Row>
-          {errors.rountingNumber && <p>{errors.rountingNumber.message}</p>}
+
           <Form.Row>
             <Col>
               <Form.Group controlId="accountNumber">
                 <Form.Label>
                   <FormattedMessage {...messages.accountNumber} />
-                  &nbsp;<span className={style.required} aria-label="required">*</span>
+                  &nbsp;
+                  <span className={style.required} aria-label="required">
+                    *
+                  </span>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="accountNumber"
                   ref={register}
-                  isValid={formState.touched.accountNumber && !errors.accountNumber}
+                  isValid={
+                    formState.touched.accountNumber && !errors.accountNumber
+                  }
+                  isInvalid={
+                    formState.touched.accountNumber && errors.accountNumber
+                  }
                 />
+                {errors.accountNumber && (
+                  <Form.Control.Feedback type="invalid">
+                    {errors.accountNumber.message}
+                  </Form.Control.Feedback>
+                )}
               </Form.Group>
             </Col>
             <Col>
               <Form.Group controlId="confirmAccountNumber">
                 <Form.Label>
                   <FormattedMessage {...messages.accountNumberConfirmation} />
-                  &nbsp;<span className={style.required} aria-label="required">*</span>
+                  &nbsp;
+                  <span className={style.required} aria-label="required">
+                    *
+                  </span>
                 </Form.Label>
                 <Form.Control
                   type="text"
                   name="confirmAccountNumber"
                   ref={register}
-                  isValid={formState.touched.confirmAccountNumber && !errors.confirmAccountNumber}
+                  isValid={
+                    formState.touched.confirmAccountNumber &&
+                    !errors.confirmAccountNumber
+                  }
+                  isInvalid={
+                    formState.touched.confirmAccountNumber &&
+                    errors.confirmAccountNumber
+                  }
                 />
+                {errors.confirmAccountNumber && (
+                  <Form.Control.Feedback type="invalid">
+                    {errors.confirmAccountNumber.message}
+                  </Form.Control.Feedback>
+                )}
               </Form.Group>
             </Col>
           </Form.Row>
-          {errors.accountNumber && <p>{errors.accountNumber.message}</p>}
+
           <Form.Row>
             <Col>
               <Form.Check
@@ -115,14 +178,15 @@ export default function EditBankAccount() {
             <FormattedMessage {...messages.addBankMessage} />
           </p>
         </Modal.Body>
-
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary" type="submit" ref={register} name="submit">
+          <Button variant="secondary" onClick={props.onHide}>
+            Close
+          </Button>
+          <Button variant="primary" type="submit" name="submit">
             <FormattedMessage {...messages.addBankSubmit} />
           </Button>
         </Modal.Footer>
-      </Modal.Dialog>
-    </Form>
+      </Form>
+    </Modal>
   );
 }

@@ -1,7 +1,7 @@
 /*
  * Bank Account
  */
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { Container, Button } from 'react-bootstrap';
@@ -15,6 +15,11 @@ import style from './styles/style.scss';
 import messages from './messages';
 
 export default function BankAccount() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <article className={style.bankaccountbg}>
       <Helmet>
@@ -29,13 +34,13 @@ export default function BankAccount() {
         <p className={style.pageScaffoldingHeader}>
           <FormattedMessage {...messages.scaffoldingHeader} />
         </p>
-        <Button variant="primary" size="md">
+        <Button variant="primary" size="md" onClick={handleShow}>
           <FontAwesomeIcon icon={faPlus} color="#ffffff" />
           &nbsp;New Bank Account
         </Button>
         <hr />
         <BankList />
-        <EditModal />
+        <EditModal show={show} onHide={handleClose} />
       </Container>
     </article>
   );
