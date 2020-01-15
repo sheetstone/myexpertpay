@@ -1,750 +1,742 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "name": "Dr. Faye Botsford",
-      "email": "Karlie74@yahoo.com"
-    },
-    {
-      "id": 2,
-      "name": "Nigel Kunze",
-      "email": "Morton3@yahoo.com"
-    },
-    {
-      "id": 3,
-      "name": "Kamron Hamill",
-      "email": "Mireille.Frami79@hotmail.com"
-    },
-    {
-      "id": 4,
-      "name": "Shyanne Ledner",
-      "email": "Sofia_Wiegand17@yahoo.com"
-    },
-    {
-      "id": 5,
-      "name": "Loyal Schmidt",
-      "email": "Elias94@gmail.com"
-    },
-    {
-      "id": 6,
-      "name": "Hosea Reynolds",
-      "email": "Vidal25@hotmail.com"
-    },
-    {
-      "id": 7,
-      "name": "Elta Hickle",
-      "email": "Brooklyn3@yahoo.com"
-    },
-    {
-      "id": 8,
-      "name": "Erin Doyle",
-      "email": "Jayda.Swift6@yahoo.com"
-    }
-  ],
-  "banks": [
-    {
-      "id": 1,
-      "name": "Chase",
-      "type": "Checking",
-      "rountinnum": 595167285297,
-      "accountnum": 695198759436,
-      "verified": false
-    },
-    {
-      "id": 2,
-      "name": "Wells Fargo",
-      "type": "Saving",
-      "rountinnum": 165742881130,
-      "accountnum": 341000770684,
-      "verified": false
-    },
-    {
-      "id": 3,
-      "name": "Wells Fargo",
-      "type": "Saving",
-      "rountinnum": 165742881130,
-      "accountnum": 786237232852,
-      "verified": true
-    },
-    {
-      "id": 4,
-      "name": "Citi Bank",
-      "type": "Saving",
-      "rountinnum": 861798630561,
-      "accountnum": 968332487158,
-      "verified": false
-    },
-    {
-      "id": 5,
-      "name": "Citi Bank",
-      "type": "Checking",
-      "rountinnum": 861798630561,
-      "accountnum": 877561043947,
-      "verified": true
-    },
-    {
-      "name": "U.S. Corp",
-      "type": "checking",
-      "rountinnum": "067014822",
-      "accountnum": "1234",
-      "verified": false,
-      "id": 6
-    }
-  ],
-  "payments": [
-    {
-      "id": 1,
-      "name": "Dr. Faye Botsford",
-      "amount": "742.42",
-      "status": 1,
-      "bank": "Citi Bank - 7158",
-      "casenumber": "PPEW-321312",
-      "catgory": "Food"
-    },
-    {
-      "id": 2,
-      "name": "Loyal Schmidt",
-      "amount": "314.28",
-      "status": 1,
-      "bank": "Citi Bank - 7158",
-      "casenumber": "PPEW-321312",
-      "catgory": "Food"
-    },
-    {
-      "id": 3,
-      "name": "Nigel Kunze",
-      "amount": "865.69",
-      "status": 2,
-      "bank": "Wells Fargo - 0684",
-      "casenumber": "PPEW-321312",
-      "catgory": "Clothing"
-    },
-    {
-      "id": 4,
-      "name": "Shyanne Ledner",
-      "amount": "378.26",
-      "status": 0,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "12312422322",
-      "catgory": "Supplyment"
-    },
-    {
-      "id": 5,
-      "name": "Kamron Hamill",
-      "amount": "324.04",
-      "status": 2,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "12312422322",
-      "catgory": "Clothing"
-    },
-    {
-      "id": 6,
-      "name": "Dr. Faye Botsford",
-      "amount": "363.28",
-      "status": 0,
-      "bank": "Chase - 9436",
-      "casenumber": "12312422322",
-      "catgory": "Food"
-    },
-    {
-      "id": 7,
-      "name": "Kamron Hamill",
-      "amount": "913.49",
-      "status": 0,
-      "bank": "Chase - 9436",
-      "casenumber": "12SDF-2222",
-      "catgory": "Book"
-    },
-    {
-      "id": 8,
-      "name": "Hosea Reynolds",
-      "amount": "144.61",
-      "status": 2,
-      "bank": "Wells Fargo - 0684",
-      "casenumber": "PPEW-321312",
-      "catgory": "Clothing"
-    },
-    {
-      "id": 9,
-      "name": "Nigel Kunze",
-      "amount": "647.59",
-      "status": 2,
-      "bank": "Citi Bank - 3947",
-      "casenumber": "DF-12010304",
-      "catgory": "Clothing"
-    },
-    {
-      "id": 10,
-      "name": "Nigel Kunze",
-      "amount": "341.56",
-      "status": 3,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "12SDF-2222",
-      "catgory": "Book"
-    },
-    {
-      "id": 11,
-      "name": "Dr. Faye Botsford",
-      "amount": "503.49",
-      "status": 2,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "12SDF-2222",
-      "catgory": "Supplyment"
-    },
-    {
-      "id": 12,
-      "name": "Nigel Kunze",
-      "amount": "952.08",
-      "status": 1,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "DF-12010304",
-      "catgory": "Clothing"
-    },
-    {
-      "id": 13,
-      "name": "Nigel Kunze",
-      "amount": "282.82",
-      "status": 3,
-      "bank": "Wells Fargo - 0684",
-      "casenumber": "12SDF-2222",
-      "catgory": "Supplyment"
-    },
-    {
-      "id": 14,
-      "name": "Dr. Faye Botsford",
-      "amount": "979.41",
-      "status": 1,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "DF-12010304",
-      "catgory": "Supplyment"
-    },
-    {
-      "id": 15,
-      "name": "Dr. Faye Botsford",
-      "amount": "861.22",
-      "status": 2,
-      "bank": "Wells Fargo - 2852",
-      "casenumber": "DF-12010304",
-      "catgory": "Clothing"
-    },
-    {
-      "id": 16,
-      "name": "Hosea Reynolds",
-      "amount": "282.71",
-      "status": 0,
-      "bank": "Chase - 9436",
-      "casenumber": "DF-12010304",
-      "catgory": "Householding"
-    },
-    {
-      "id": 17,
-      "name": "Dr. Faye Botsford",
-      "amount": "474.92",
-      "status": 1,
-      "bank": "Wells Fargo - 0684",
-      "casenumber": "12SDF-2222",
-      "catgory": "Food"
-    },
-    {
-      "id": 18,
-      "name": "Kamron Hamill",
-      "amount": "922.78",
-      "status": 2,
-      "bank": "Wells Fargo - 0684",
-      "casenumber": "DF-12010304",
-      "catgory": "Food"
-    },
-    {
-      "id": 19,
-      "name": "Shyanne Ledner",
-      "amount": "515.94",
-      "status": 2,
-      "bank": "Citi Bank - 3947",
-      "casenumber": "12SDF-2222",
-      "catgory": "Book"
-    },
-    {
-      "id": 20,
-      "name": "Shyanne Ledner",
-      "amount": "280.67",
-      "status": 2,
-      "bank": "Citi Bank - 7158",
-      "casenumber": "DF-12010304",
-      "catgory": "Food"
-    }
-  ],
-  "events": [
-    {
-      "id": 1,
-      "eventName": "repudiandae vitae vero",
-      "startTime": "2020-02-11T01:18:37.615Z",
-      "endTime": "2020-02-12T07:18:37.615Z",
-      "inviter": "Elta Hickle",
-      "location": "7959 Margret Plaza, Suite 486, KS"
-    },
-    {
-      "id": 2,
-      "eventName": "fuga autem enim",
-      "startTime": "2020-01-28T01:05:43.912Z",
-      "endTime": "2020-01-28T11:05:43.912Z",
-      "inviter": "Nigel Kunze",
-      "location": "234 Marques Valleys, Apt. 798, MA"
-    },
-    {
-      "id": 3,
-      "eventName": "odio ut asperiores",
-      "startTime": "2019-12-17T09:01:05.882Z",
-      "endTime": "2019-12-18T04:01:05.882Z",
-      "inviter": "Elta Hickle",
-      "location": "2023 Ariel Tunnel, Apt. 091, NJ"
-    },
-    {
-      "id": 4,
-      "eventName": "inventore dignissimos quae",
-      "startTime": "2020-01-08T01:23:51.715Z",
-      "endTime": "2020-01-08T10:23:51.715Z",
-      "inviter": "Elta Hickle",
-      "location": "067 Elva Loop, Apt. 680, AR"
-    },
-    {
-      "id": 5,
-      "eventName": "voluptatum praesentium similique",
-      "startTime": "2019-11-22T20:10:23.969Z",
-      "endTime": "2019-11-24T06:10:23.969Z",
-      "inviter": "Loyal Schmidt",
-      "location": "4854 Leannon Well, Suite 735, AL"
-    },
-    {
-      "id": 6,
-      "eventName": "labore molestias dolor",
-      "startTime": "2019-10-02T01:12:58.030Z",
-      "endTime": "2019-10-02T06:12:58.030Z",
-      "inviter": "Elta Hickle",
-      "location": "82927 Runolfsdottir Loop, Suite 577, WV"
-    },
-    {
-      "id": 7,
-      "eventName": "sint omnis nihil",
-      "startTime": "2020-01-31T18:26:28.980Z",
-      "endTime": "2020-02-01T00:26:28.980Z",
-      "inviter": "Shyanne Ledner",
-      "location": "1065 Aryanna Gardens, Apt. 996, IN"
-    },
-    {
-      "id": 8,
-      "eventName": "dolore consequuntur modi",
-      "startTime": "2020-01-26T21:41:33.171Z",
-      "endTime": "2020-01-28T13:41:33.171Z",
-      "inviter": "Erin Doyle",
-      "location": "715 Mabelle Alley, Apt. 651, MA"
-    },
-    {
-      "id": 9,
-      "eventName": "eos illum maiores",
-      "startTime": "2020-02-18T00:49:21.879Z",
-      "endTime": "2020-02-19T20:49:21.879Z",
-      "inviter": "Elta Hickle",
-      "location": "149 Antonetta Land, Suite 086, WA"
-    },
-    {
-      "id": 10,
-      "eventName": "vitae autem quaerat",
-      "startTime": "2020-02-06T04:28:48.557Z",
-      "endTime": "2020-02-06T21:28:48.557Z",
-      "inviter": "Elta Hickle",
-      "location": "877 Ward Road, Apt. 733, OH"
-    },
-    {
-      "id": 11,
-      "eventName": "dolor veniam nesciunt",
-      "startTime": "2019-12-26T04:51:20.118Z",
-      "endTime": "2019-12-27T00:51:20.118Z",
-      "inviter": "Elta Hickle",
-      "location": "258 Osvaldo Orchard, Apt. 195, CT"
-    },
-    {
-      "id": 12,
-      "eventName": "voluptas explicabo inventore",
-      "startTime": "2019-11-05T06:32:21.950Z",
-      "endTime": "2019-11-05T07:32:21.950Z",
-      "inviter": "Nigel Kunze",
-      "location": "58062 Hertha Turnpike, Apt. 915, MN"
-    },
-    {
-      "id": 13,
-      "eventName": "ipsum dolor quia",
-      "startTime": "2020-01-25T15:50:29.278Z",
-      "endTime": "2020-01-26T13:50:29.278Z",
-      "inviter": "Nigel Kunze",
-      "location": "1622 Judah Flat, Suite 901, MS"
-    },
-    {
-      "id": 14,
-      "eventName": "et dolore fugiat",
-      "startTime": "2019-11-14T12:59:36.952Z",
-      "endTime": "2019-11-16T12:59:36.952Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "95527 Little Plains, Apt. 458, IN"
-    },
-    {
-      "id": 15,
-      "eventName": "rerum dolores doloremque",
-      "startTime": "2019-11-08T02:14:15.289Z",
-      "endTime": "2019-11-08T05:14:15.289Z",
-      "inviter": "Kamron Hamill",
-      "location": "586 Hauck Curve, Suite 160, MS"
-    },
-    {
-      "id": 16,
-      "eventName": "perspiciatis aspernatur enim",
-      "startTime": "2019-10-10T21:48:22.023Z",
-      "endTime": "2019-10-11T18:48:22.023Z",
-      "inviter": "Kamron Hamill",
-      "location": "32791 Lacey Prairie, Suite 547, OH"
-    },
-    {
-      "id": 17,
-      "eventName": "eius aut ratione",
-      "startTime": "2019-11-26T13:16:41.155Z",
-      "endTime": "2019-11-27T11:16:41.155Z",
-      "inviter": "Loyal Schmidt",
-      "location": "8141 Schinner Springs, Apt. 151, IA"
-    },
-    {
-      "id": 18,
-      "eventName": "culpa enim labore",
-      "startTime": "2019-10-09T00:17:13.549Z",
-      "endTime": "2019-10-10T13:17:13.549Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "294 Zboncak Stravenue, Suite 073, CA"
-    },
-    {
-      "id": 19,
-      "eventName": "quae assumenda molestiae",
-      "startTime": "2019-10-30T17:29:46.013Z",
-      "endTime": "2019-10-30T22:29:46.013Z",
-      "inviter": "Shyanne Ledner",
-      "location": "713 Bednar Corners, Apt. 365, NH"
-    },
-    {
-      "id": 20,
-      "eventName": "ex laudantium aut",
-      "startTime": "2019-11-20T12:13:57.569Z",
-      "endTime": "2019-11-22T03:13:57.569Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "007 Larkin Courts, Apt. 098, AK"
-    },
-    {
-      "id": 21,
-      "eventName": "expedita nulla dolorem",
-      "startTime": "2020-02-14T19:03:15.963Z",
-      "endTime": "2020-02-15T05:03:15.963Z",
-      "inviter": "Elta Hickle",
-      "location": "9515 Rodriguez Mill, Apt. 216, TN"
-    },
-    {
-      "id": 22,
-      "eventName": "est ipsum quo",
-      "startTime": "2020-02-16T18:21:51.886Z",
-      "endTime": "2020-02-17T14:21:51.886Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "02818 Marvin Orchard, Suite 382, MO"
-    },
-    {
-      "id": 23,
-      "eventName": "necessitatibus expedita commodi",
-      "startTime": "2019-12-05T07:33:28.512Z",
-      "endTime": "2019-12-05T17:33:28.512Z",
-      "inviter": "Hosea Reynolds",
-      "location": "052 Aimee Villages, Apt. 829, IN"
-    },
-    {
-      "id": 24,
-      "eventName": "occaecati quia molestiae",
-      "startTime": "2019-11-14T04:21:55.389Z",
-      "endTime": "2019-11-15T11:21:55.389Z",
-      "inviter": "Elta Hickle",
-      "location": "61932 Carson Station, Apt. 627, ID"
-    },
-    {
-      "id": 25,
-      "eventName": "quidem autem ea",
-      "startTime": "2019-10-12T15:51:19.957Z",
-      "endTime": "2019-10-12T22:51:19.957Z",
-      "inviter": "Hosea Reynolds",
-      "location": "0472 Ullrich Terrace, Suite 855, WI"
-    },
-    {
-      "id": 26,
-      "eventName": "nam rem at",
-      "startTime": "2019-10-31T06:55:11.933Z",
-      "endTime": "2019-10-31T12:55:11.933Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "94166 Bayer Turnpike, Suite 154, DE"
-    },
-    {
-      "id": 27,
-      "eventName": "non soluta dolorem",
-      "startTime": "2019-12-25T08:18:02.896Z",
-      "endTime": "2019-12-25T20:18:02.896Z",
-      "inviter": "Elta Hickle",
-      "location": "603 Roberts Mountains, Apt. 681, FL"
-    },
-    {
-      "id": 28,
-      "eventName": "dolore nulla consequatur",
-      "startTime": "2019-12-24T14:28:52.917Z",
-      "endTime": "2019-12-24T20:28:52.917Z",
-      "inviter": "Loyal Schmidt",
-      "location": "802 Derrick Ferry, Apt. 625, KS"
-    },
-    {
-      "id": 29,
-      "eventName": "ipsum tenetur occaecati",
-      "startTime": "2019-10-23T07:04:37.408Z",
-      "endTime": "2019-10-24T16:04:37.408Z",
-      "inviter": "Kamron Hamill",
-      "location": "3964 Maeve Union, Apt. 080, IL"
-    },
-    {
-      "id": 30,
-      "eventName": "incidunt molestiae sunt",
-      "startTime": "2019-10-08T09:24:39.426Z",
-      "endTime": "2019-10-10T08:24:39.426Z",
-      "inviter": "Shyanne Ledner",
-      "location": "76967 Jillian Alley, Suite 886, MT"
-    },
-    {
-      "id": 31,
-      "eventName": "non quos vitae",
-      "startTime": "2019-11-16T17:00:39.799Z",
-      "endTime": "2019-11-18T11:00:39.799Z",
-      "inviter": "Elta Hickle",
-      "location": "54405 Landen Street, Apt. 150, NC"
-    },
-    {
-      "id": 32,
-      "eventName": "labore sed neque",
-      "startTime": "2020-01-01T18:58:13.359Z",
-      "endTime": "2020-01-02T17:58:13.359Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "4920 Brakus Skyway, Apt. 830, IN"
-    },
-    {
-      "id": 33,
-      "eventName": "deserunt eveniet qui",
-      "startTime": "2019-11-07T12:06:25.370Z",
-      "endTime": "2019-11-07T19:06:25.370Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "030 Amparo Island, Apt. 399, NY"
-    },
-    {
-      "id": 34,
-      "eventName": "voluptatum laborum ut",
-      "startTime": "2019-10-24T09:17:44.937Z",
-      "endTime": "2019-10-26T05:17:44.937Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "0676 Shields Plaza, Suite 451, TN"
-    },
-    {
-      "id": 35,
-      "eventName": "ducimus et fuga",
-      "startTime": "2020-02-12T00:10:53.371Z",
-      "endTime": "2020-02-13T03:10:53.371Z",
-      "inviter": "Erin Doyle",
-      "location": "9968 Ryan Points, Apt. 343, SC"
-    },
-    {
-      "id": 36,
-      "eventName": "ullam et qui",
-      "startTime": "2019-11-13T09:56:20.912Z",
-      "endTime": "2019-11-13T10:56:20.912Z",
-      "inviter": "Nigel Kunze",
-      "location": "633 Stiedemann Land, Suite 647, TX"
-    },
-    {
-      "id": 37,
-      "eventName": "nam nihil qui",
-      "startTime": "2020-01-21T13:31:09.343Z",
-      "endTime": "2020-01-22T14:31:09.343Z",
-      "inviter": "Loyal Schmidt",
-      "location": "135 Joaquin Glens, Suite 917, CT"
-    },
-    {
-      "id": 38,
-      "eventName": "assumenda ratione aspernatur",
-      "startTime": "2020-02-17T07:13:50.285Z",
-      "endTime": "2020-02-18T05:13:50.285Z",
-      "inviter": "Shyanne Ledner",
-      "location": "912 Daphnee Hills, Apt. 750, NH"
-    },
-    {
-      "id": 39,
-      "eventName": "aut maxime aut",
-      "startTime": "2019-10-05T02:35:04.225Z",
-      "endTime": "2019-10-05T04:35:04.225Z",
-      "inviter": "Hosea Reynolds",
-      "location": "4060 Gerlach Corner, Suite 331, MN"
-    },
-    {
-      "id": 40,
-      "eventName": "eos numquam corrupti",
-      "startTime": "2019-10-10T12:37:35.378Z",
-      "endTime": "2019-10-12T10:37:35.378Z",
-      "inviter": "Shyanne Ledner",
-      "location": "925 Kautzer Union, Suite 242, KY"
-    },
-    {
-      "id": 41,
-      "eventName": "explicabo necessitatibus blanditiis",
-      "startTime": "2020-01-24T01:27:07.357Z",
-      "endTime": "2020-01-24T06:27:07.357Z",
-      "inviter": "Elta Hickle",
-      "location": "056 Hollis Stravenue, Suite 277, AL"
-    },
-    {
-      "id": 42,
-      "eventName": "provident delectus sint",
-      "startTime": "2019-10-05T09:58:10.642Z",
-      "endTime": "2019-10-05T10:58:10.642Z",
-      "inviter": "Shyanne Ledner",
-      "location": "204 Bosco Lodge, Apt. 757, KY"
-    },
-    {
-      "id": 43,
-      "eventName": "sint quaerat id",
-      "startTime": "2020-01-05T17:34:33.774Z",
-      "endTime": "2020-01-07T13:34:33.774Z",
-      "inviter": "Loyal Schmidt",
-      "location": "493 Laurine Fords, Apt. 986, IN"
-    },
-    {
-      "id": 44,
-      "eventName": "non et nobis",
-      "startTime": "2020-01-31T06:02:11.050Z",
-      "endTime": "2020-01-31T14:02:11.050Z",
-      "inviter": "Kamron Hamill",
-      "location": "819 Amparo Track, Apt. 705, HI"
-    },
-    {
-      "id": 45,
-      "eventName": "quidem sunt similique",
-      "startTime": "2020-02-25T17:52:07.905Z",
-      "endTime": "2020-02-26T13:52:07.905Z",
-      "inviter": "Nigel Kunze",
-      "location": "39499 Nienow Path, Apt. 616, AL"
-    },
-    {
-      "id": 46,
-      "eventName": "voluptas voluptates officiis",
-      "startTime": "2019-12-20T11:24:14.243Z",
-      "endTime": "2019-12-20T22:24:14.243Z",
-      "inviter": "Shyanne Ledner",
-      "location": "4085 Ubaldo Street, Suite 031, RI"
-    },
-    {
-      "id": 47,
-      "eventName": "tempore minus et",
-      "startTime": "2020-01-12T16:22:49.844Z",
-      "endTime": "2020-01-13T06:22:49.844Z",
-      "inviter": "Elta Hickle",
-      "location": "8032 Moshe Knolls, Apt. 023, MA"
-    },
-    {
-      "id": 48,
-      "eventName": "eveniet sit voluptatibus",
-      "startTime": "2020-01-03T13:07:28.369Z",
-      "endTime": "2020-01-05T08:07:28.369Z",
-      "inviter": "Kamron Hamill",
-      "location": "371 Stamm Run, Apt. 910, TN"
-    },
-    {
-      "id": 49,
-      "eventName": "aut ex nihil",
-      "startTime": "2019-12-03T08:56:04.307Z",
-      "endTime": "2019-12-04T03:56:04.307Z",
-      "inviter": "Elta Hickle",
-      "location": "72570 Trantow Loop, Apt. 614, DE"
-    },
-    {
-      "id": 50,
-      "eventName": "eos expedita temporibus",
-      "startTime": "2019-10-05T09:50:40.550Z",
-      "endTime": "2019-10-06T00:50:40.550Z",
-      "inviter": "Loyal Schmidt",
-      "location": "80338 Leanne Plaza, Apt. 575, UT"
-    },
-    {
-      "id": 51,
-      "eventName": "voluptatem aut qui",
-      "startTime": "2020-02-25T17:37:04.107Z",
-      "endTime": "2020-02-26T10:37:04.107Z",
-      "inviter": "Elta Hickle",
-      "location": "7495 Bayer Harbor, Apt. 813, KY"
-    },
-    {
-      "id": 52,
-      "eventName": "assumenda cupiditate quam",
-      "startTime": "2020-01-15T08:03:43.400Z",
-      "endTime": "2020-01-17T00:03:43.400Z",
-      "inviter": "Kamron Hamill",
-      "location": "7689 Felicita Groves, Suite 838, WI"
-    },
-    {
-      "id": 53,
-      "eventName": "ea et sunt",
-      "startTime": "2020-02-20T21:15:29.177Z",
-      "endTime": "2020-02-22T14:15:29.177Z",
-      "inviter": "Dr. Faye Botsford",
-      "location": "98421 Frances Greens, Suite 723, VA"
-    },
-    {
-      "id": 54,
-      "eventName": "consequatur in dolore",
-      "startTime": "2020-01-04T15:38:45.385Z",
-      "endTime": "2020-01-06T10:38:45.385Z",
-      "inviter": "Kamron Hamill",
-      "location": "64816 Cruickshank Square, Apt. 035, VA"
-    },
-    {
-      "id": 55,
-      "eventName": "vitae veritatis dolores",
-      "startTime": "2019-10-30T20:43:11.189Z",
-      "endTime": "2019-10-31T17:43:11.189Z",
-      "inviter": "Erin Doyle",
-      "location": "485 Diana Locks, Apt. 706, FL"
-    },
-    {
-      "id": 56,
-      "eventName": "esse quae quia",
-      "startTime": "2020-01-30T15:32:54.507Z",
-      "endTime": "2020-01-30T23:32:54.507Z",
-      "inviter": "Elta Hickle",
-      "location": "70969 Schneider Creek, Apt. 069, WV"
-    },
-    {
-      "id": 57,
-      "eventName": "quae sed minima",
-      "startTime": "2020-02-10T04:12:49.394Z",
-      "endTime": "2020-02-10T20:12:49.394Z",
-      "inviter": "Hosea Reynolds",
-      "location": "224 Goodwin Dam, Apt. 543, WV"
-    },
-    {
-      "id": 58,
-      "eventName": "quod numquam aut",
-      "startTime": "2019-12-28T21:48:03.879Z",
-      "endTime": "2019-12-30T17:48:03.879Z",
-      "inviter": "Hosea Reynolds",
-      "location": "10516 Jadon Roads, Suite 360, PA"
-    },
-    {
-      "id": 59,
-      "eventName": "amet ad nemo",
-      "startTime": "2020-01-26T16:31:13.344Z",
-      "endTime": "2020-01-28T17:31:13.344Z",
-      "inviter": "Kamron Hamill",
-      "location": "27328 Eve Port, Suite 473, AZ"
-    }
-  ]
+	"users": [
+		{
+			"id": 1,
+			"name": "Bill Roob",
+			"email": "Miguel.Zieme2@yahoo.com"
+		},
+		{
+			"id": 2,
+			"name": "Juana Bayer",
+			"email": "Jeanne.Schmitt@hotmail.com"
+		},
+		{
+			"id": 3,
+			"name": "Amie Murray DVM",
+			"email": "Waldo24@gmail.com"
+		},
+		{
+			"id": 4,
+			"name": "Micah Huels",
+			"email": "Johathan26@gmail.com"
+		},
+		{
+			"id": 5,
+			"name": "Delores Stiedemann PhD",
+			"email": "Dayne_Stroman@yahoo.com"
+		},
+		{
+			"id": 6,
+			"name": "Reyna Nader",
+			"email": "Layne_Hayes83@hotmail.com"
+		},
+		{
+			"id": 7,
+			"name": "Jaylen Kemmer PhD",
+			"email": "Maybelle82@hotmail.com"
+		},
+		{
+			"id": 8,
+			"name": "Madison Collins",
+			"email": "Alayna_Parisian1@hotmail.com"
+		}
+	],
+	"banks": [
+		{
+			"id": 1,
+			"name": "Citi Bank",
+			"type": "Saving",
+			"rountinnum": 583952699787,
+			"accountnum": 250249418430,
+			"verified": false
+		},
+		{
+			"id": 2,
+			"name": "Chase",
+			"type": "Checking",
+			"rountinnum": 310979310190,
+			"accountnum": 20314037567,
+			"verified": true
+		},
+		{
+			"id": 3,
+			"name": "Citi Bank",
+			"type": "Checking",
+			"rountinnum": 583952699787,
+			"accountnum": 254986206302,
+			"verified": true
+		},
+		{
+			"id": 4,
+			"name": "Capital One",
+			"type": "Saving",
+			"rountinnum": 689879845362,
+			"accountnum": 649082616204,
+			"verified": true
+		},
+		{
+			"id": 5,
+			"name": "Capital One",
+			"type": "Checking",
+			"rountinnum": 689879845362,
+			"accountnum": 631141335470,
+			"verified": true
+		}
+	],
+	"payments": [
+		{
+			"id": 1,
+			"name": "Madison Collins",
+			"amount": "912.24",
+			"status": 0,
+			"bank": "Citi Bank - 8430",
+			"casenumber": "12SDF-2222",
+			"catgory": "Clothing"
+		},
+		{
+			"id": 2,
+			"name": "Amie Murray DVM",
+			"amount": "427.74",
+			"status": 1,
+			"bank": "Citi Bank - 8430",
+			"casenumber": "DF-12010304",
+			"catgory": "Book"
+		},
+		{
+			"id": 3,
+			"name": "Bill Roob",
+			"amount": "625.72",
+			"status": 1,
+			"bank": "Capital One - 6204",
+			"casenumber": "12SDF-2222",
+			"catgory": "Clothing"
+		},
+		{
+			"id": 4,
+			"name": "Amie Murray DVM",
+			"amount": "541.59",
+			"status": 3,
+			"bank": "Chase - 7567",
+			"casenumber": "12SDF-2222",
+			"catgory": "Supplyment"
+		},
+		{
+			"id": 5,
+			"name": "Jaylen Kemmer PhD",
+			"amount": "943.99",
+			"status": 1,
+			"bank": "Citi Bank - 6302",
+			"casenumber": "12312422322",
+			"catgory": "Food"
+		},
+		{
+			"id": 6,
+			"name": "Jaylen Kemmer PhD",
+			"amount": "381.16",
+			"status": 1,
+			"bank": "Capital One - 6204",
+			"casenumber": "DF-12010304",
+			"catgory": "Householding"
+		},
+		{
+			"id": 7,
+			"name": "Madison Collins",
+			"amount": "929.57",
+			"status": 3,
+			"bank": "Citi Bank - 8430",
+			"casenumber": "12312422322",
+			"catgory": "Supplyment"
+		},
+		{
+			"id": 8,
+			"name": "Madison Collins",
+			"amount": "612.09",
+			"status": 3,
+			"bank": "Capital One - 5470",
+			"casenumber": "12SDF-2222",
+			"catgory": "Supplyment"
+		},
+		{
+			"id": 9,
+			"name": "Micah Huels",
+			"amount": "570.33",
+			"status": 0,
+			"bank": "Citi Bank - 8430",
+			"casenumber": "DF-12010304",
+			"catgory": "Supplyment"
+		},
+		{
+			"id": 10,
+			"name": "Madison Collins",
+			"amount": "812.38",
+			"status": 3,
+			"bank": "Chase - 7567",
+			"casenumber": "DF-12010304",
+			"catgory": "Householding"
+		},
+		{
+			"id": 11,
+			"name": "Juana Bayer",
+			"amount": "847.12",
+			"status": 1,
+			"bank": "Capital One - 5470",
+			"casenumber": "12SDF-2222",
+			"catgory": "Food"
+		},
+		{
+			"id": 12,
+			"name": "Bill Roob",
+			"amount": "942.80",
+			"status": 1,
+			"bank": "Capital One - 5470",
+			"casenumber": "PPEW-321312",
+			"catgory": "Food"
+		},
+		{
+			"id": 13,
+			"name": "Madison Collins",
+			"amount": "443.75",
+			"status": 1,
+			"bank": "Capital One - 6204",
+			"casenumber": "PPEW-321312",
+			"catgory": "Book"
+		},
+		{
+			"id": 14,
+			"name": "Delores Stiedemann PhD",
+			"amount": "109.37",
+			"status": 0,
+			"bank": "Citi Bank - 6302",
+			"casenumber": "DF-12010304",
+			"catgory": "Book"
+		},
+		{
+			"id": 15,
+			"name": "Juana Bayer",
+			"amount": "714.56",
+			"status": 2,
+			"bank": "Capital One - 6204",
+			"casenumber": "12SDF-2222",
+			"catgory": "Clothing"
+		},
+		{
+			"id": 16,
+			"name": "Reyna Nader",
+			"amount": "575.26",
+			"status": 3,
+			"bank": "Citi Bank - 6302",
+			"casenumber": "PPEW-321312",
+			"catgory": "Food"
+		},
+		{
+			"id": 17,
+			"name": "Delores Stiedemann PhD",
+			"amount": "989.80",
+			"status": 2,
+			"bank": "Chase - 7567",
+			"casenumber": "12312422322",
+			"catgory": "Clothing"
+		},
+		{
+			"id": 18,
+			"name": "Juana Bayer",
+			"amount": "552.43",
+			"status": 1,
+			"bank": "Citi Bank - 6302",
+			"casenumber": "PPEW-321312",
+			"catgory": "Supplyment"
+		},
+		{
+			"id": 19,
+			"name": "Amie Murray DVM",
+			"amount": "656.51",
+			"status": 2,
+			"bank": "Citi Bank - 8430",
+			"casenumber": "DF-12010304",
+			"catgory": "Book"
+		},
+		{
+			"id": 20,
+			"name": "Delores Stiedemann PhD",
+			"amount": "646.24",
+			"status": 2,
+			"bank": "Citi Bank - 8430",
+			"casenumber": "12312422322",
+			"catgory": "Householding"
+		}
+	],
+	"events": [
+		{
+			"id": 1,
+			"eventName": "quia libero nemo",
+			"startTime": "2020-01-21T22:12:22.083Z",
+			"endTime": "2020-01-22T21:12:22.083Z",
+			"inviter": "Reyna Nader",
+			"location": "48664 Janick Lodge, Suite 330, WV"
+		},
+		{
+			"id": 2,
+			"eventName": "sint autem neque",
+			"startTime": "2020-02-27T15:43:41.202Z",
+			"endTime": "2020-02-27T16:43:41.202Z",
+			"inviter": "Amie Murray DVM",
+			"location": "0080 Lucienne River, Apt. 309, CA"
+		},
+		{
+			"id": 3,
+			"eventName": "qui necessitatibus esse",
+			"startTime": "2019-10-27T00:33:22.052Z",
+			"endTime": "2019-10-27T13:33:22.052Z",
+			"inviter": "Micah Huels",
+			"location": "99420 Murphy Ways, Apt. 620, HI"
+		},
+		{
+			"id": 4,
+			"eventName": "quia sit ipsam",
+			"startTime": "2019-11-06T18:46:25.572Z",
+			"endTime": "2019-11-08T17:46:25.572Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "3893 Era Center, Apt. 813, NM"
+		},
+		{
+			"id": 5,
+			"eventName": "dolorem qui molestias",
+			"startTime": "2020-02-06T07:45:40.642Z",
+			"endTime": "2020-02-06T10:45:40.642Z",
+			"inviter": "Bill Roob",
+			"location": "321 White Glen, Apt. 760, NV"
+		},
+		{
+			"id": 6,
+			"eventName": "dolores est dolore",
+			"startTime": "2019-11-27T04:35:19.565Z",
+			"endTime": "2019-11-28T14:35:19.565Z",
+			"inviter": "Micah Huels",
+			"location": "295 Volkman Tunnel, Apt. 045, RI"
+		},
+		{
+			"id": 7,
+			"eventName": "minima ea non",
+			"startTime": "2020-02-18T23:34:44.572Z",
+			"endTime": "2020-02-19T17:34:44.572Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "69790 Bednar Well, Suite 394, HI"
+		},
+		{
+			"id": 8,
+			"eventName": "explicabo ut nostrum",
+			"startTime": "2020-01-27T00:31:35.006Z",
+			"endTime": "2020-01-27T12:31:35.006Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "64944 Asha Gateway, Apt. 310, RI"
+		},
+		{
+			"id": 9,
+			"eventName": "ut minima est",
+			"startTime": "2019-11-05T16:35:30.961Z",
+			"endTime": "2019-11-06T21:35:30.961Z",
+			"inviter": "Micah Huels",
+			"location": "286 Jerad Harbor, Apt. 238, WA"
+		},
+		{
+			"id": 10,
+			"eventName": "eum enim rem",
+			"startTime": "2019-10-03T15:37:54.876Z",
+			"endTime": "2019-10-04T08:37:54.876Z",
+			"inviter": "Bill Roob",
+			"location": "47004 Gutkowski Forks, Suite 114, DE"
+		},
+		{
+			"id": 11,
+			"eventName": "et cumque ad",
+			"startTime": "2019-11-19T08:41:59.372Z",
+			"endTime": "2019-11-21T07:41:59.372Z",
+			"inviter": "Reyna Nader",
+			"location": "87073 Lynn Hollow, Apt. 001, HI"
+		},
+		{
+			"id": 12,
+			"eventName": "sed beatae eius",
+			"startTime": "2020-02-06T13:43:57.761Z",
+			"endTime": "2020-02-08T02:43:57.761Z",
+			"inviter": "Madison Collins",
+			"location": "77822 Schoen Creek, Suite 309, CO"
+		},
+		{
+			"id": 13,
+			"eventName": "dignissimos nobis est",
+			"startTime": "2019-10-20T01:18:56.131Z",
+			"endTime": "2019-10-20T06:18:56.131Z",
+			"inviter": "Reyna Nader",
+			"location": "56034 Hansen Port, Suite 369, WV"
+		},
+		{
+			"id": 14,
+			"eventName": "similique ut quo",
+			"startTime": "2019-10-14T08:09:44.451Z",
+			"endTime": "2019-10-15T15:09:44.451Z",
+			"inviter": "Bill Roob",
+			"location": "0933 Ava Forges, Suite 807, DE"
+		},
+		{
+			"id": 15,
+			"eventName": "eum rerum quo",
+			"startTime": "2020-02-09T01:05:00.701Z",
+			"endTime": "2020-02-09T09:05:00.701Z",
+			"inviter": "Madison Collins",
+			"location": "726 Kane Gardens, Suite 551, CT"
+		},
+		{
+			"id": 16,
+			"eventName": "optio libero quibusdam",
+			"startTime": "2020-02-09T16:00:30.629Z",
+			"endTime": "2020-02-10T20:00:30.629Z",
+			"inviter": "Juana Bayer",
+			"location": "288 Shawn Harbors, Suite 567, NH"
+		},
+		{
+			"id": 17,
+			"eventName": "velit consequatur autem",
+			"startTime": "2019-10-08T23:55:39.130Z",
+			"endTime": "2019-10-09T11:55:39.130Z",
+			"inviter": "Bill Roob",
+			"location": "2806 Bradtke Bridge, Suite 938, UT"
+		},
+		{
+			"id": 18,
+			"eventName": "aut porro sit",
+			"startTime": "2019-12-08T23:45:12.572Z",
+			"endTime": "2019-12-09T20:45:12.572Z",
+			"inviter": "Madison Collins",
+			"location": "469 Bayer View, Apt. 734, ME"
+		},
+		{
+			"id": 19,
+			"eventName": "suscipit qui nisi",
+			"startTime": "2019-11-01T23:22:58.209Z",
+			"endTime": "2019-11-03T23:22:58.209Z",
+			"inviter": "Jaylen Kemmer PhD",
+			"location": "39208 Izabella Via, Apt. 957, NJ"
+		},
+		{
+			"id": 20,
+			"eventName": "voluptatum quibusdam velit",
+			"startTime": "2019-11-13T07:32:01.064Z",
+			"endTime": "2019-11-14T10:32:01.064Z",
+			"inviter": "Amie Murray DVM",
+			"location": "302 Michel Port, Suite 686, DE"
+		},
+		{
+			"id": 21,
+			"eventName": "inventore fugit quo",
+			"startTime": "2019-10-11T16:11:21.575Z",
+			"endTime": "2019-10-13T06:11:21.575Z",
+			"inviter": "Juana Bayer",
+			"location": "100 Paige Views, Suite 166, MI"
+		},
+		{
+			"id": 22,
+			"eventName": "consequatur molestiae neque",
+			"startTime": "2019-12-05T07:58:05.932Z",
+			"endTime": "2019-12-05T20:58:05.932Z",
+			"inviter": "Amie Murray DVM",
+			"location": "261 Corkery Ramp, Suite 584, KY"
+		},
+		{
+			"id": 23,
+			"eventName": "magni cupiditate nostrum",
+			"startTime": "2020-02-10T01:31:37.454Z",
+			"endTime": "2020-02-11T17:31:37.454Z",
+			"inviter": "Jaylen Kemmer PhD",
+			"location": "76584 Zion Rapid, Suite 146, AK"
+		},
+		{
+			"id": 24,
+			"eventName": "et sunt voluptas",
+			"startTime": "2020-01-21T11:38:02.284Z",
+			"endTime": "2020-01-21T21:38:02.284Z",
+			"inviter": "Jaylen Kemmer PhD",
+			"location": "973 McLaughlin Port, Apt. 208, NY"
+		},
+		{
+			"id": 25,
+			"eventName": "et et praesentium",
+			"startTime": "2019-10-05T19:08:38.211Z",
+			"endTime": "2019-10-05T21:08:38.211Z",
+			"inviter": "Juana Bayer",
+			"location": "6070 Nelle Squares, Apt. 063, AK"
+		},
+		{
+			"id": 26,
+			"eventName": "illo nulla sed",
+			"startTime": "2019-10-27T01:41:20.158Z",
+			"endTime": "2019-10-27T02:41:20.158Z",
+			"inviter": "Madison Collins",
+			"location": "7385 Von Springs, Apt. 459, AZ"
+		},
+		{
+			"id": 27,
+			"eventName": "deserunt rerum quam",
+			"startTime": "2019-11-02T23:14:27.547Z",
+			"endTime": "2019-11-03T17:14:27.547Z",
+			"inviter": "Micah Huels",
+			"location": "84173 Berge Rue, Apt. 578, NJ"
+		},
+		{
+			"id": 28,
+			"eventName": "sint illo ex",
+			"startTime": "2020-02-04T12:31:25.754Z",
+			"endTime": "2020-02-05T19:31:25.754Z",
+			"inviter": "Jaylen Kemmer PhD",
+			"location": "4112 Tromp Pine, Apt. 957, HI"
+		},
+		{
+			"id": 29,
+			"eventName": "ut possimus sed",
+			"startTime": "2020-02-18T08:04:26.540Z",
+			"endTime": "2020-02-18T16:04:26.540Z",
+			"inviter": "Bill Roob",
+			"location": "43893 Isadore Neck, Apt. 587, HI"
+		},
+		{
+			"id": 30,
+			"eventName": "excepturi assumenda iure",
+			"startTime": "2019-10-28T07:39:39.708Z",
+			"endTime": "2019-10-28T13:39:39.708Z",
+			"inviter": "Juana Bayer",
+			"location": "1141 O'Kon Creek, Suite 660, TN"
+		},
+		{
+			"id": 31,
+			"eventName": "vel dolores odio",
+			"startTime": "2019-11-16T15:33:52.294Z",
+			"endTime": "2019-11-16T20:33:52.294Z",
+			"inviter": "Micah Huels",
+			"location": "733 Roob Fields, Suite 957, CO"
+		},
+		{
+			"id": 32,
+			"eventName": "et aut suscipit",
+			"startTime": "2019-11-16T03:45:29.245Z",
+			"endTime": "2019-11-17T18:45:29.245Z",
+			"inviter": "Bill Roob",
+			"location": "293 Lynch Hills, Suite 659, GA"
+		},
+		{
+			"id": 33,
+			"eventName": "non quo sapiente",
+			"startTime": "2020-02-27T10:08:09.936Z",
+			"endTime": "2020-02-28T05:08:09.936Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "53523 Rick Streets, Apt. 447, IL"
+		},
+		{
+			"id": 34,
+			"eventName": "dignissimos aut officia",
+			"startTime": "2020-02-25T12:37:31.509Z",
+			"endTime": "2020-02-25T15:37:31.509Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "02162 Zboncak Wall, Apt. 578, MN"
+		},
+		{
+			"id": 35,
+			"eventName": "enim odit veniam",
+			"startTime": "2019-10-13T00:08:04.447Z",
+			"endTime": "2019-10-13T07:08:04.447Z",
+			"inviter": "Bill Roob",
+			"location": "5657 McGlynn Squares, Suite 970, CO"
+		},
+		{
+			"id": 36,
+			"eventName": "necessitatibus qui omnis",
+			"startTime": "2019-11-22T09:54:00.928Z",
+			"endTime": "2019-11-24T05:54:00.928Z",
+			"inviter": "Amie Murray DVM",
+			"location": "313 Mariane Plaza, Apt. 516, ME"
+		},
+		{
+			"id": 37,
+			"eventName": "voluptatibus cumque vero",
+			"startTime": "2019-10-09T02:27:06.111Z",
+			"endTime": "2019-10-10T01:27:06.111Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "63273 Wilton Center, Suite 260, GA"
+		},
+		{
+			"id": 38,
+			"eventName": "neque et officiis",
+			"startTime": "2020-01-09T07:51:09.947Z",
+			"endTime": "2020-01-09T10:51:09.947Z",
+			"inviter": "Delores Stiedemann PhD",
+			"location": "4153 Schaefer Crescent, Suite 819, ID"
+		},
+		{
+			"id": 39,
+			"eventName": "iusto non ut",
+			"startTime": "2019-10-27T01:17:27.517Z",
+			"endTime": "2019-10-27T09:17:27.517Z",
+			"inviter": "Jaylen Kemmer PhD",
+			"location": "28705 Cremin Crescent, Suite 432, MO"
+		},
+		{
+			"id": 40,
+			"eventName": "voluptatem consectetur explicabo",
+			"startTime": "2020-02-09T02:09:11.814Z",
+			"endTime": "2020-02-10T14:09:11.814Z",
+			"inviter": "Juana Bayer",
+			"location": "4624 Skyla Way, Apt. 807, ID"
+		},
+		{
+			"id": 41,
+			"eventName": "quae nemo aliquam",
+			"startTime": "2019-12-25T14:56:30.398Z",
+			"endTime": "2019-12-25T19:56:30.398Z",
+			"inviter": "Amie Murray DVM",
+			"location": "71627 Alexa Coves, Suite 823, MS"
+		},
+		{
+			"id": 42,
+			"eventName": "laudantium fugiat pariatur",
+			"startTime": "2019-12-01T02:38:13.512Z",
+			"endTime": "2019-12-02T04:38:13.512Z",
+			"inviter": "Bill Roob",
+			"location": "4761 Schamberger Point, Apt. 842, TN"
+		},
+		{
+			"id": 43,
+			"eventName": "sunt nesciunt dolorem",
+			"startTime": "2019-12-02T16:59:10.739Z",
+			"endTime": "2019-12-03T11:59:10.739Z",
+			"inviter": "Bill Roob",
+			"location": "063 Emard Meadows, Apt. 124, AZ"
+		},
+		{
+			"id": 44,
+			"eventName": "deserunt repellendus voluptas",
+			"startTime": "2019-12-26T07:17:35.517Z",
+			"endTime": "2019-12-27T11:17:35.517Z",
+			"inviter": "Madison Collins",
+			"location": "29083 Hintz Mountains, Apt. 940, NC"
+		},
+		{
+			"id": 45,
+			"eventName": "nemo dolorem eum",
+			"startTime": "2019-10-03T16:43:00.790Z",
+			"endTime": "2019-10-04T02:43:00.790Z",
+			"inviter": "Madison Collins",
+			"location": "42036 Brady Groves, Apt. 888, SC"
+		},
+		{
+			"id": 46,
+			"eventName": "nisi est nobis",
+			"startTime": "2020-02-11T19:38:49.578Z",
+			"endTime": "2020-02-13T12:38:49.578Z",
+			"inviter": "Juana Bayer",
+			"location": "72744 Fleta Bridge, Apt. 910, MA"
+		},
+		{
+			"id": 47,
+			"eventName": "at eum cum",
+			"startTime": "2020-02-17T04:14:04.524Z",
+			"endTime": "2020-02-18T17:14:04.524Z",
+			"inviter": "Amie Murray DVM",
+			"location": "4591 Feil Passage, Suite 729, SD"
+		},
+		{
+			"id": 48,
+			"eventName": "provident libero praesentium",
+			"startTime": "2019-11-26T03:10:53.698Z",
+			"endTime": "2019-11-27T14:10:53.698Z",
+			"inviter": "Amie Murray DVM",
+			"location": "82476 Lucie Divide, Apt. 191, LA"
+		},
+		{
+			"id": 49,
+			"eventName": "nulla nesciunt voluptas",
+			"startTime": "2020-02-11T18:34:25.016Z",
+			"endTime": "2020-02-13T06:34:25.016Z",
+			"inviter": "Bill Roob",
+			"location": "94842 Ed Meadow, Suite 179, KS"
+		},
+		{
+			"id": 50,
+			"eventName": "deleniti aperiam sunt",
+			"startTime": "2020-02-05T03:42:53.486Z",
+			"endTime": "2020-02-05T21:42:53.486Z",
+			"inviter": "Micah Huels",
+			"location": "0262 Wisozk Canyon, Suite 639, AL"
+		},
+		{
+			"id": 51,
+			"eventName": "iure voluptatem sint",
+			"startTime": "2019-10-25T13:23:06.172Z",
+			"endTime": "2019-10-26T03:23:06.172Z",
+			"inviter": "Micah Huels",
+			"location": "9202 Gerlach Skyway, Suite 899, MA"
+		},
+		{
+			"id": 52,
+			"eventName": "harum sint illum",
+			"startTime": "2019-10-29T07:50:30.634Z",
+			"endTime": "2019-10-30T12:50:30.634Z",
+			"inviter": "Amie Murray DVM",
+			"location": "5080 Brekke Shores, Suite 560, CT"
+		},
+		{
+			"id": 53,
+			"eventName": "nihil vitae eum",
+			"startTime": "2019-12-11T18:36:47.983Z",
+			"endTime": "2019-12-12T08:36:47.983Z",
+			"inviter": "Madison Collins",
+			"location": "36844 Garret Fort, Suite 421, SC"
+		},
+		{
+			"id": 54,
+			"eventName": "similique sed quis",
+			"startTime": "2019-12-15T16:58:00.743Z",
+			"endTime": "2019-12-16T15:58:00.743Z",
+			"inviter": "Bill Roob",
+			"location": "784 Joshuah Isle, Apt. 460, OK"
+		},
+		{
+			"id": 55,
+			"eventName": "placeat voluptas accusamus",
+			"startTime": "2019-10-06T18:27:34.968Z",
+			"endTime": "2019-10-08T15:27:34.968Z",
+			"inviter": "Juana Bayer",
+			"location": "45953 Douglas Flats, Apt. 080, ND"
+		},
+		{
+			"id": 56,
+			"eventName": "odit porro unde",
+			"startTime": "2019-12-13T06:39:43.009Z",
+			"endTime": "2019-12-15T04:39:43.009Z",
+			"inviter": "Madison Collins",
+			"location": "63849 Howe Throughway, Apt. 187, IN"
+		},
+		{
+			"id": 57,
+			"eventName": "iusto dolorem vel",
+			"startTime": "2019-12-19T13:35:49.086Z",
+			"endTime": "2019-12-21T02:35:49.086Z",
+			"inviter": "Juana Bayer",
+			"location": "915 Shields Summit, Apt. 236, WA"
+		},
+		{
+			"id": 58,
+			"eventName": "autem et qui",
+			"startTime": "2020-02-16T05:06:01.434Z",
+			"endTime": "2020-02-16T08:06:01.434Z",
+			"inviter": "Micah Huels",
+			"location": "074 Donnelly Fords, Apt. 476, AL"
+		},
+		{
+			"id": 59,
+			"eventName": "quia eveniet eaque",
+			"startTime": "2020-01-01T03:11:30.921Z",
+			"endTime": "2020-01-01T13:11:30.921Z",
+			"inviter": "Bill Roob",
+			"location": "224 Greenfelder Throughway, Apt. 932, RI"
+		}
+	]
 }

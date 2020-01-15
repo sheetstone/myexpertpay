@@ -30,6 +30,15 @@
   "myexpertpay.containers.BankAccount.accountNumberConfirmation": "Confirm Account",
   "myexpertpay.containers.BankAccount.rountingNumber": "Bank Routing Number",
 
+  "myexpertpay.containers.Payment.header": "Payment Activities",
+  "myexpertpay.containers.Payment.sendBtn": "Send Money",
+  "myexpertpay.containers.Payment.requestBtn": "Request Money",
+  "myexpertpay.containers.Payment.addBankSubmit": "Confirm & Complete",
+  "myexpertpay.containers.Payment.addBankMessage": "By add bank account, you accept the General Condition & Confidentiality Rules",
+  "myexpertpay.containers.Payment.accountNumber": "Account Number",
+  "myexpertpay.containers.Payment.accountNumberConfirmation": "Confirm Account",
+  "myexpertpay.containers.Payment.rountingNumber": "Bank Routing Number",
+
   "myexpertpay.containers.HomePage.start_project.header": "Start your next react project in seconds",
   "myexpertpay.containers.HomePage.start_project.message": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
   "myexpertpay.containers.HomePage.tryme.atPrefix": "@",

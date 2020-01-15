@@ -17,7 +17,7 @@ import EditModal from './component/EditModal';
 import style from './styles/style.scss';
 import messages from './messages';
 
-class BankAccount extends React.Component {
+class PaymentList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,7 +57,7 @@ class BankAccount extends React.Component {
     return (
       <article className={style.bankaccountbg}>
         <Helmet>
-          <title>Bank Account</title>
+          <title>Payment Activity</title>
           <meta name="description" content="My Expertpay" />
         </Helmet>
         <Container>
@@ -65,12 +65,12 @@ class BankAccount extends React.Component {
             <FormattedMessage {...messages.header} />
           </h1>
           <hr />
-          <p className={style.pageScaffoldingHeader}>
-            <FormattedMessage {...messages.scaffoldingHeader} />
-          </p>
           <Button variant="primary" size="md" onClick={this.setShowEditBank}>
-            <FontAwesomeIcon icon={faPlus} color="#ffffff" />
-            &nbsp;New Bank Account
+            Send Money
+          </Button>
+
+          <Button variant="primary" size="md" onClick={this.setShowEditBank}>
+            Request Money
           </Button>
           <hr />
           {isLoading && <LoadingIndicator />}
@@ -82,4 +82,4 @@ class BankAccount extends React.Component {
   }
 }
 
-export default BankAccount;
+export default PaymentList;

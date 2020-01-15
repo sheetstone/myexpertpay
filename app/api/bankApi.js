@@ -1,17 +1,18 @@
 import getBaseUrl from './baseUrl';
+import resolveBankName from './resolveBankName';
 
 const baseUrl = getBaseUrl();
 
-export function getBanks() {
+export async function getBanks() {
   return get('banks');
 }
-export function deleteBank(id) {
+export async function deleteBank(id) {
   return del(`banks/${id}`);
 }
 
-export function addBank(data) {
+export async function addBank(data) {
   let bankData = {};
-  bankData['name'] = "U.S. Corp";
+  bankData['name'] = await resolveBankName(data.rountingNumber);
   bankData['type'] = data.accountType;
   bankData['rountinnum'] = data.rountingNumber;
   bankData['accountnum'] = data.accountNumber;
