@@ -1,33 +1,31 @@
 /*
- * Bank Account
+ * Payment List
  */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { Container, Button } from 'react-bootstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import LoadingIndicator from 'components/LoadingIndicator';
+import DataPicker from 'components/DataPicker';
 
-import { getBanks, deleteBank } from 'api/bankApi';
+import { getPayments } from 'api/paymentApi';
+import moment from 'moment';
 
-import BankList from './component/BankList';
-import EditModal from './component/EditModal';
+import PaymentList from './component/PaymentList';
 
 import style from './styles/style.scss';
 import messages from './messages';
 
-class PaymentList extends React.Component {
+class Payment extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showEditBank: false,
-      bankData: [],
+      paymentData: [],
       isLoading: true,
+      startDate: moment().subtract(1, 'months'),
+      endDate: moment(),
     };
-    this.setShowEditBank = () => this.setState({ showEditBank: true });
-    this.setHideEditBank = () => this.setState({ showEditBank: false });
-    this.delBank = this.delBank.bind(this);
+    this.handleDateChange = this.handleDateChange.bind(this);
     this.reloadState = this.reloadState.bind(this);
   }
 
@@ -37,22 +35,24 @@ class PaymentList extends React.Component {
 
   async reloadState() {
     this.setState({ isLoading: true });
-    const result = await getBanks();
+    const result = await getPayments();
+    console.log(result);
     this.setState({
-      bankData: result,
+      paymentData: result,
       isLoading: false,
     });
   }
 
-  async delBank(item) {
-    // console.log("deleted:",item);
-    await deleteBank(item.id);
-    // console.log(result);
-    this.reloadState();
+  handleDateChange(val, name) {
+    if (name === "startData"){
+     this.setState({startDate: val});
+    }else{
+      this.setState({endDate: val});
+    }
   }
 
   render() {
-    const { isLoading, bankData, showEditBank } = this.state;
+    const { isLoading, paymentData, showEditBank } = this.state;
 
     return (
       <article className={style.bankaccountbg}>
@@ -65,21 +65,24 @@ class PaymentList extends React.Component {
             <FormattedMessage {...messages.header} />
           </h1>
           <hr />
-          <Button variant="primary" size="md" onClick={this.setShowEditBank}>
+          <DataPicker name="startData" label="Start Date" id="startDate" value={this.state.startDate} onValueChange={this.handleDateChange}/>
+          <DataPicker name="endDate" label="End Date" id="endDate" value={this.state.endDate} onValueChange={this.handleDateChange}/>
+
+          <Button variant="primary" size="md">
             Send Money
           </Button>
 
-          <Button variant="primary" size="md" onClick={this.setShowEditBank}>
+          <Button variant="primary" size="md">
             Request Money
           </Button>
           <hr />
+
           {isLoading && <LoadingIndicator />}
-          {!isLoading && <BankList bankData={bankData} delBank={this.delBank}/>}
-          <EditModal show={showEditBank} onHide={this.setHideEditBank} reloadState={this.reloadState} />
+          {!isLoading && <PaymentList paymentData={paymentData} />}
         </Container>
       </article>
     );
   }
 }
 
-export default PaymentList;
+export default Payment;

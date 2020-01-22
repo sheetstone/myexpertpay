@@ -10,7 +10,6 @@ function Day(props) {
     selectEvent,
   } = props;
 
-
   const eventsList = events.map((item, i) => (
     <li className={style.eventsli} key={item.id} onClick={(event) => selectEvent(event, item)}>
       {drawDot(i)}
