@@ -79,6 +79,7 @@ function generateData() {
     const bank = faker.random.arrayElement(bankDict);
     const casenumber = faker.random.arrayElement(caseDict);
     const catgory = faker.random.arrayElement(catgoryDict);
+    const paymentdate = faker.date.past(1);
 
     payments.push({
       id,
@@ -88,6 +89,7 @@ function generateData() {
       bank,
       casenumber,
       catgory,
+      paymentdate,
     });
   }
 

@@ -8,7 +8,7 @@
 }
 .calendarGroup{
   border: 1px solid #339999;
-  padding: 0.3em 0.4em;
+  padding: 0.5em 0.4em 0.3em 0.4em;
   border-radius: 0px;
   width: 165px;
   float: left;
@@ -31,6 +31,7 @@
   font-size: 13px;
   color:#333;
   display: block;
+  margin-bottom: 0;
 }
 
 .datapickerinput{
