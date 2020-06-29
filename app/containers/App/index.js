@@ -30,6 +30,7 @@ export default function App() {
         <Route path="/bankaccount" component={BankAccount} />
         <Route path="/caseinfo" component={CaseInfo} />
         <Route path="/payment" component={Payment} />
+        <Route component={NotFoundPage} />
       </Switch>
       <Footer />
     </div>
