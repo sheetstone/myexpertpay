@@ -1,5 +1,6 @@
 const fs = require('fs');
 const faker = require('faker');
+const moment = require('moment');
 
 function generateData() {
   const users = [];
@@ -51,9 +52,13 @@ function generateData() {
 
   const events = [];
 
+  const stateDate = moment().subtract(3, 'month').format('YYYY-MM-DD');
+  const endDate = moment().add(3, 'month').format('YYYY-MM-DD');
+
+
   for (let id = 1; id < 60; id++) {
     const eventName = faker.lorem.words();
-    const startTime = faker.date.between('2019-10-01', '2020-2-28');
+    const startTime = faker.date.between(stateDate, endDate);
     const endTime = new Date(startTime);
     const inviter = faker.random.arrayElement(userDict);
     const location = faker.address.streetAddress() + ", " + faker.address.secondaryAddress() + ", " + faker.address.stateAbbr();
